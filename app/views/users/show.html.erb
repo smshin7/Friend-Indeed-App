@@ -1,4 +1,6 @@
 <h1><%= @user.name %>'s profile</h1>
 
-<%= link_to "Create deed", new_user_deed_path(@user) %> 
+
+<div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com" data-layout="button"></div><br>
+<%= link_to "Create deed", new_user_deed_path(@user) %><br>
 <%= link_to "Show Deeds", user_deed_path(current_user, @user) %>
