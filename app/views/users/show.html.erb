@@ -1,0 +1,4 @@
+<h1><%= @user.name %>'s profile</h1>
+
+<%= link_to "Create deed", new_user_deed_path(@user) %> 
+<%= link_to "Show Deeds", user_deed_path(current_user, @user) %>
