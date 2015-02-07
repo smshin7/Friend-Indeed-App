@@ -1,0 +1,7 @@
+<h1>Users</h1>
+
+<h3>List of All users</h3>
+
+<% @users.each do |u| %>
+  <%= link_to u.name, u %>
+<% end %>
