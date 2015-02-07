@@ -1,0 +1,7 @@
+<h1>New Deed</h1>
+
+<%= form_for @deed, url: user_deeds_path do |f| %>
+  <p><%= f.text_area :body %></p>
+  <p>For <%= f.text_field :to_id %></p>
+  <%= f.submit %>
+<% end %>
