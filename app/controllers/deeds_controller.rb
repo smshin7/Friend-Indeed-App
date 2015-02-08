@@ -18,4 +18,39 @@ class DeedsController < ApplicationController
     end
   end
 
+  def edit
+    get_deed
+  end
+
+  def update
+    get_deed
+
+    @deed.update(deed_params)
+
+    if current_user.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    get_deed
+    
+    if @deed.destroy
+      redirect_to root_path
+    end
+  end
+
+  private
+
+  def deed_params
+    pararms.require(:deed).permit!
+  end
+
+  def get_deed
+    @deed = current_user.deed.find(params[:id])
+  end
+
+
 end
