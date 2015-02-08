@@ -12,7 +12,7 @@ class DeedsController < ApplicationController
     current_user.deeds.new(params.require(:deed).permit!)
 
     if current_user.save
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       render :new
     end
