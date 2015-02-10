@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'users#index'
+  root 'pages#homepage'
 
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback' => 'sessions#create'
