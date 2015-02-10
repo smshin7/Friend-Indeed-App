@@ -1,45 +1,107 @@
 body {
-	background-color: rgba(240,67,49, .9);
+	background-color: #F15545;
+	font-family: 'Raleway', sans-serif;
+}
+.bluegrey {
+	color: #3E5967;
 }
 
-.navbar-default {
-	background-color: solid 1px rgba(240,67,49, .9)
+
+/************************************/
+/************** NAVBAR **************/
+/************************************/
+.friendindeed p {
+	color: #ffffff;
+	font-family: 'Sacramento', cursive;
+	font-size: 90px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding: 0px;
+	background-color: #F15545;
+	width: 360px;
 }
-.btn-position{
-	margin-top: 400px;
+.navbar {
+	background-color: transparent;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 1px;
+	border-left: 0px;
+	border-color: white;
+	border-bottom-style: solid;
+	border-radius: 0px;
+}
+.navbar-override {
+	height: 70px
+}
+
+/************************************/
+/************** SOMETHING **************/
+/************************************/
+.row {
+	margin-top:  80px;
+	height: 525px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.btn-position {
-	margin-left: auto;
-	margin-right: auto;
+.bggrid {
+	// background-color: black;
+	background-color: transparent;
 }
+.blah {
+	width: auto;
+	height: 500px;
+	border: 1px solid white;
+
+}
+.pagenum {
+	font-size: 350px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	line-height: 164px;
+}
+
+/************************************/
+/************** BUTTON **************/
+/************************************/
 .btn-signin {
 	background: transparent;
 	border-radius: 4px;
 	color: #ffffff;
-	font-size: 40px;
+	font-size: 30px;
 	padding: 20px 25px;
 	text-decoration: none;
 	border: solid 1px #ffffff;
-
-
+	position: absolute;
+	bottom: 70px;
+	right: 90px;
 }
 .btn-signin:hover,
 .btn-signin:focus{
 	background-color: white;
-	color: rgba(240,67,49, .9);
-	border: solid 1px rgba(240,67,49, .9);
-	border-color: rgba(240,67,49, .9);
+	color: #F15545;
+	border: solid 1px #F15545;
+	border-color: #F15545;
 	outline: none;
 	transition: background-color 0.3s ease-out, 
-				border-color 0.3s ease-in;
+	border-color 0.3s ease-in;
 	cursor: pointer;
 	text-decoration: none
 }
 
-.btn-position {
-	margin-top: 300px;
-	margin-left: 100px;
-}
+
+
+/***** DUMP **********/
+
+// .friendindeed p::before,
+// .friendindeed p::after {
+// 	content: "";
+// 	display: inline-block;
+// 	height: 1px;
+// 	position: relative;
+// 	vertical-align: middle;
+// 	width: 20%;
+// 	background: rgba(0, 0, 0, 0.2);
+// }
