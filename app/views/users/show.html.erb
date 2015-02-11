@@ -1,6 +1,13 @@
 <h1><%= @user.name %>'s profile</h1>
 
+<% if @referrer == nil %>
+  <h4>Original User</h4>
+<% else %>
+  <h4>Invited by <%= link_to @referrer.name, user_path(@referrer) %><%=  %></h4>
+<% end %>
 
-<div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com" data-layout="button"></div><br>
-<%= link_to "Create deed", new_user_deed_path(@user) %><br>
-<%= link_to "Show Deeds", user_deed_path(current_user, @user) %>
+<% if @user == current_user %>
+  <p><div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div></p>
+  <p><%= link_to "Create deed", new_user_deed_path(@user), class: "btn btn-default" %></p>
+<% end %>
+  <p><%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-default" %></p>
