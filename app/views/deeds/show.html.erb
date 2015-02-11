@@ -1,7 +1,0 @@
-<h1>Deeds done by <%= current_user.name %></h1>
-
-<% @current_user.deeds.each do |d| %>
-  <p><%= d.body %> for <%= d.to_id %></p>
-<% end %>
-
-<%= link_to "Back to profile", user_path(current_user) %>
