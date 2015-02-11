@@ -1,3 +1,9 @@
 <div class='navbar navbar-default bg-override'>
-	<%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <!-- Displays the current user helper method if user is logged in -->
+  <div id="user-widget" class="pull-right">
+    <% if current_user %>
+      Welcome <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", signout_path, id: "sign_out", class: "btn btn-danger" %>
+    <% end %>
+  </div>
 </div>

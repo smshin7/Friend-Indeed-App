@@ -1,7 +1,8 @@
 class DeedsController < ApplicationController
 
-  def show
-    @deed = current_user.deeds
+  def index
+    @user = User.find(params[:user_id])
+    @deeds = @user.deeds
   end
 
   def new
