@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     expect(user).to be_invalid
   end
 
-  it "is invalid without a " do
+  it "is invalid without a token" do
     user = FactoryGirl.build(:user, token: nil)
     expect(user).to be_invalid
   end
