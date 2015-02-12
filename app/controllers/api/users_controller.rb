@@ -4,12 +4,12 @@ module Api
 
     def index
       users = User.all
-      render json: users.to_json(:include => :deeds), only: [:id, :name, :uid, :referrer]
+      render json: users.to_json(:include => :deeds), only: [:id, :name, :token, :referrer]
     end
 
     def show
       user = User.find(params[:id])
-      render json: user.to_json(:include => :deeds), only: [:id, :name, :uid, :referrer]    
+      render json: user.to_json(:include => :deeds), only: [:id, :name, :token, :referrer]    
     end
   end
 end

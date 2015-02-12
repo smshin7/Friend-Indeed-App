@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  before_create :generate_token
+
   has_many :deeds, foreign_key: "from_id"
 
   def self.from_omniauth(auth)
@@ -10,7 +12,12 @@ class User < ActiveRecord::Base
       user.save
     end
   end
+  
+  def generate_token
+    self.token = SecureRandom.urlsafe_base64
+  end
 
   validates :name, presence: true
-  validates :uid, presence: true
+  validates :token, presence: true
+  
 end
