@@ -2,5 +2,7 @@
 
     describe "Users API", :type => :request do
 
-      it "returns a list of users"
+      it "returns a list of users" do
+        
+      end
     end
