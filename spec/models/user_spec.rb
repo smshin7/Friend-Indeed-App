@@ -11,11 +11,9 @@ RSpec.describe User, type: :model do
     expect(user).to be_invalid
   end
 
-  it "is invalid without a user id" do
-    user = FactoryGirl.build(:user, uid: nil)
+  it "is invalid without a token" do
+    user = FactoryGirl.build(:user, token: nil)
     expect(user).to be_invalid
   end
-
-  it "should have a deed"
 
 end

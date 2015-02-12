@@ -7,7 +7,7 @@
 <% end %>
 
 <% if @user == current_user %>
-  <p><div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div></p>
+  <p><div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.token %>" data-layout="button"></div></p>
   <p><%= link_to "Create deed", new_user_deed_path(@user), class: "btn btn-default" %></p>
 <% end %>
   <p><%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-default" %></p>

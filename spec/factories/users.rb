@@ -6,6 +6,7 @@ FactoryGirl.define do
     name "user_name"
     referrer "hello"
     created_at "123"
+    token "mystring"
     updated_at "123"
     oauth_token "123"
     oauth_expires_at "123"
