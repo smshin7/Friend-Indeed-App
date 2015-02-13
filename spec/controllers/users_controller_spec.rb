@@ -24,7 +24,7 @@ RSpec.describe UsersController, :type => :controller do
   end
 
   describe 'GET show' do
-    let!(:user1) { User.create!(provider: "facebook", name: "Scott", uid: "123", token: "1234") }
+    let!(:user) { User.create!(provider: "facebook", name: "Scott", uid: "123", token: "1234") }
     
     before(:each) {
       get :show, id: user.id
@@ -39,7 +39,7 @@ RSpec.describe UsersController, :type => :controller do
     end
     
     it "assigns the requested user to a variable user" do
-      expect(assigns(:user1)).to eq(user) 
+      expect(assigns(:user)).to eq(user) 
     end
   end
 
