@@ -1,37 +1,109 @@
 body {
-	background-color: rgba(240,67,49, .9);
+	background-color: #F15545;
+	font-family: 'Raleway', sans-serif;
+	color: #3E5967;
 }
-
-.navbar-default {
-	background-color: solid 1px rgba(240,67,49, .9)
+.bluegrey {
+	color: #3E5967;
 }
-.btn-position{
-	margin-top: 400px;
+.white {
+	color: #ffffff;
+}
+.ltblue{
+	color: #49e2f2
+}
+.completed-deeds-title {
+	font-size: 28px;
+}
+#sign_out:hover {
+	text-decoration: none;
+}
+/************************************/
+/********* Landing Page *************/
+/************************************/
+.friendindeed p {
+	color: #ffffff;
+	font-family: 'Sacramento', cursive;
+	font-size: 90px;
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
+	padding: 0px;
+	background-color: #F15545;
+	width: 360px;
+}
+.navbar {
+	background-color: transparent;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 1px;
+	border-left: 0px;
+	border-color: white;
+	border-bottom-style: solid;
+	border-radius: 0px;
 }
 
-.btn-position {
-	margin-left: auto;
-	margin-right: auto;
+/******* landing page logo line ********/
+.navbar-override {
+	height: 70px
 }
+
+/************************************/
+/************** NAVBAR **************/
+/************************************/
+.navbar-default 
+.navbar-text {
+	color: #ffffff;
+}
+.navbar-text {
+	font-family: 'Sacramento', cursive;
+	font-size: 65px;
+	color: #ffffff;
+	margin: 0px 0px 5px 0px;
+}
+.navbar-right-override {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	padding-top: 30px;
+	color: #3E5967;
+
+}
+.navbar-right-override > a {
+	color: #3E5967;
+}
+.navbar-right-override > a:hover {
+	color: #49e2f2;
+}
+
+/** signin | signout links **/
+strong > a {
+	color: #3E5967;
+}
+strong > a:hover {
+	color: #49e2f2;
+	text-decoration: none;
+}
+
+/************************************/
+/************** BUTTON **************/
+/************************************/
 .btn-signin {
 	background: transparent;
 	border-radius: 4px;
 	color: #ffffff;
-	font-size: 40px;
+	font-size: 30px;
 	padding: 20px 25px;
 	text-decoration: none;
 	border: solid 1px #ffffff;
-
-
+	// position: absolute;
+	// bottom: 70px;
+	// right: 90px;
 }
 .btn-signin:hover,
 .btn-signin:focus{
 	background-color: white;
-	color: rgba(240,67,49, .9);
-	border: solid 1px rgba(240,67,49, .9);
-	border-color: rgba(240,67,49, .9);
+	color: #F15545;
 	outline: none;
 	transition: background-color 0.3s ease-out, 
 				border-color 0.3s ease-in;
@@ -39,7 +111,112 @@ body {
 	text-decoration: none
 }
 
-.btn-position {
-	margin-top: 300px;
-	margin-left: 100px;
+.btn-custom {
+	background: transparent;
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #ffffff;
+	width: 140px;
+	height: auto;
+	margin: 5px 0px;
+	outline: none;
+	
+}
+.btn-custom:hover,
+.btn-custom:focus {
+	background: #ffffff;
+	color: #F15545;
+	transition: background-color 0.3s ease-out, 
+	border-color 0.3s ease-in;
+	text-decoration: none;
+}
+.btn-custom-alt {
+	background: #F15545;
+	border-radius: 4px;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #F15545;
+	width: 140px;
+	height: auto;
+	margin: 5px 0px;
+	outline: none;
+}
+.btn-custom-alt:hover,
+.btn-custom-alt:focus {
+	background: #FFFFFF;
+	color: #F15545;
+	transition: background-color 0.3s ease-out, 
+	border-color 0.3s ease-in;
+}
+
+// Fixes width on Profile button :)
+.btn-profile{
+	width: auto;
+}
+
+/************************************/
+/***** Removes button outline *******/
+/************************************/
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+	outline: none;
+}
+
+/************************************/
+/*************** MODAL **************/
+/************************************/
+.form-control {
+	color: #3E5967;
+}
+#myModalLabel {
+	font-size: 20px;
+	font-weight: bold;
+	color: #F15545;
+}
+
+.fblogo {
+	width: 142px;
+	height: 48px;
+	margin: 5px 0;
+}
+.fblogo:hover {
+	transition: background-color 0.2s ease-out, 
+	border-color 0.2s ease-in;	
+	border: 1px  solid white
+}
+
+/************************************/
+/************ DEED CARD *************/
+/************************************/
+.deed-container {
+	width: 90%;
+	margin: auto;
+	position: relative;
+}
+.deed-card{
+	background-color: white;
+	height: 380px;
+	font-size: 14px;
+	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.deed-body{
+	font-size: 18px;
+	padding: 15px;
+}	
+.deed-name{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;	
+	border-top: #D3D3D3 1px solid;
+}
+.deed-name-border {
+	border: black 1px solid;
+	width: 50%;
+	padding: 0 10px;
 }
