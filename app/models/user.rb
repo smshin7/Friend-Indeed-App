@@ -18,5 +18,4 @@ class User < ActiveRecord::Base
   end
 
   validates :name, presence: true
-  
 end

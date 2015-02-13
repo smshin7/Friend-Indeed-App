@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         user.update(referrer: cookies[:referral])
       end
     end
-    redirect_to user_path(current_user) 
+    redirect_to user_path(current_user)
   end
 
   # Method to sign out users
