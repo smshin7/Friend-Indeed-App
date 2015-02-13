@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="800px" height="262.857px" viewBox="0 168.571 800 262.857" enable-background="new 0 168.571 800 262.857"
+	 xml:space="preserve">
+<g>
+	<path fill="#3B5998" d="M800,408.571c0,12.571-10.286,22.857-22.857,22.857H22.857C10.286,431.429,0,421.143,0,408.571V191.429
+		c0-12.572,10.286-22.857,22.857-22.857h754.286c12.571,0,22.857,10.286,22.857,22.857V408.571z"/>
+</g>
+<g>
+	<rect x="31.714" y="196" fill="#FFFFFF" width="208" height="208"/>
+	<g>
+		<path fill="#3B5998" d="M131.143,280.571v-17.714C131.143,236.571,150.572,216,174,216h29.143v35.429H174
+			c-3.429,0-6.857,5.143-6.857,10.857v18.286h36v36h-36V404h-36v-87.429H102v-36H131.143z"/>
+	</g>
+</g>
+<text transform="matrix(1.0776 0 0 1 284.7139 327.2559)" fill="#FFFFFF" font-family="'Tahoma-Bold'" font-size="92.581">Share</text>
+</svg>

@@ -13,6 +13,7 @@
 
   <!-- Javascript Code for Facebook Share button -->
   <div id="fb-root"></div>
+
     <script>
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,9 +23,6 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-
-<%= render "partials/nav" %>
-
     <%= yield %>
   </div>
 </body>

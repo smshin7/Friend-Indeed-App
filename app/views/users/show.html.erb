@@ -1,13 +1,35 @@
-<h1><%= @user.name %>'s profile</h1>
+<%= render "partials/nav" %>
+<%= render "partials/deedmodal" %>
 
-<% if @referrer == nil %>
-  <h4>Original User</h4>
-<% else %>
-  <h4>Invited by <%= link_to @referrer.name, user_path(@referrer) %><%=  %></h4>
-<% end %>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<h1><%= @user.name %>'s profile</h1>
 
-<% if @user == current_user %>
-  <p><div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div></p>
-  <p><%= link_to "Create deed", new_user_deed_path(@user), class: "btn btn-default" %></p>
-<% end %>
-  <p><%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-default" %></p>
+		<% if @referrer == nil %>
+		<h4>Original User</h4>
+		<% else %>
+		<h4>Invited by <%= link_to @referrer.name, user_path(@referrer) %></h4>
+		<% end %>
+		
+		<div class="col-sm-3">
+			<% if @user == current_user %>
+			<!-- Facebook Share button -->
+			<!-- <div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div> -->
+			<a target="_blank" href="https://facebook.com/sharer.php?u=http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>"><img class="fblogo" src="/assets/fb_share2.svg"></a>
+			<br>
+			<!-- Button to trigger Create Deed Modal -->
+			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<% end %>
+			<br>
+			<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom" %>
+		</div>
+
+		<div class="col-sm-9">
+			<!-- d3 graph -->
+		</div>
+	</div>
+</div>
+
+
+
+

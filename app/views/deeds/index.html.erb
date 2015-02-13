@@ -1,7 +1,32 @@
-<h1>Deeds done by <%= @user.name %></h1>
+<%= render "partials/nav" %>
+<%= render "partials/deedmodal" %>
 
-<% @deeds.each do |d| %>
-  <p><%= d.body %> for <%= d.to_id %></p>
-<% end %>
+<div class="deed-container">
+<div class="row">
+	<div class="col-xs-6 text-left">
+		<header class="deed-show-title"><strong><%= @user.name %>'s</strong> Completed Deeds</header>
+	</div>
+	<div class="col-xs-6 text-right">
+		<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+		<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
+	</div>
+</div>
+<!-- </div>
+ --><!-- </div> -->
+<!-- <div class="deed-container"> -->
+	<div class="row">
 
-<%= link_to "Back to profile", user_path(@user) %>
+	<!-- <div class="deed-container"> -->
+	<% @deeds.each do |d| %>
+	<div class="col-md-4">
+		<br>
+		<div class="deedcard">
+			<strong><%= d.to_id %></strong><br>
+			<%= d.body %>
+		</div>
+	</div>
+<!-- 	</div> -->
+
+	<% end %>
+	</div>
+</div>
