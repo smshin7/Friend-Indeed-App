@@ -9,6 +9,9 @@ body {
 .white {
 	color: #ffffff;
 }
+.ltblue{
+	color: #49e2f2
+}
 .set-width {
 	width: 80%;
 }
@@ -58,28 +61,30 @@ body {
 }
 .navbar-text {
 	font-family: 'Sacramento', cursive;
-	font-size: 54px;
+	font-size: 65px;
 	color: #ffffff;
 	margin: 0px 0px 5px 0px;
 }
 .navbar-right-override {
 	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
-	padding-top: 25px;
+	font-size: 22px;
+	padding-top: 30px;
 	color: #3E5967;
+
 }
 .navbar-right-override > a {
 	color: #3E5967;
 }
 .navbar-right-override > a:hover {
-	color: #ffffff;
-	text-decoration: none;
+	color: #49e2f2;
 }
+
+/** signin | signout links **/
 strong > a {
 	color: #3E5967;
 }
 strong > a:hover {
-	color: #ffffff;
+	color: #49e2f2;
 	text-decoration: none;
 }
 
@@ -127,7 +132,7 @@ strong > a:hover {
 	background: #ffffff;
 	color: #F15545;
 	transition: background-color 0.3s ease-out, 
-				border-color 0.3s ease-in;
+	border-color 0.3s ease-in;
 	text-decoration: none;
 }
 .btn-custom-alt {
@@ -147,7 +152,7 @@ strong > a:hover {
 	background: #FFFFFF;
 	color: #F15545;
 	transition: background-color 0.3s ease-out, 
-				border-color 0.3s ease-in;
+	border-color 0.3s ease-in;
 }
 .btn-profile{
 	width: auto;
@@ -180,24 +185,46 @@ strong > a:hover {
 }
 .fblogo:hover {
 	transition: background-color 0.2s ease-out, 
-				border-color 0.2s ease-in;	
+	border-color 0.2s ease-in;	
 	border: 1px  solid white
 }
 
 /************************************/
 /************ DEED CARD *************/
 /************************************/
-.deedcard{
+.deed-container {
+	width: 90%;
+	margin: auto;
+	position: relative;
+}
+.deed-card{
 	background-color: white;
 	height: 380px;
 	font-size: 14px;
-	// padding: 10px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
 	margin-bottom: 10px;
+	// position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
 }
-.deed-container {
-	width: 90%;
-	margin: auto
+.deed-body{
+	font-size: 18px;
+	padding: 15px;
+}	
+.deed-name{
+	font-size: 24px;
+	font-weight: bold;
+	// position: absolute;
+	// bottom: 0px;
+	// padding-left: 10px;
+	// padding-right: 10px;
+	text-align: center;	
+	border-top: lightgrey 1px solid;
+}
+.deed-name-border {
+	border: black 1px solid;
+	width: 50%;
+	padding: 0 10px;
 }
 
 // .card-container {
@@ -233,7 +260,7 @@ strong > a:hover {
 //     margin-left: 18px;
 //     background-size: contain;
 //     position: inline-block;
-    
+
 // }
 // .fb-logo-txt {
 //     margin-left: 27px;

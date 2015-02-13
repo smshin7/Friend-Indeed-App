@@ -2,31 +2,41 @@
 <%= render "partials/deedmodal" %>
 
 <div class="deed-container">
-<div class="row">
-	<div class="col-xs-6 text-left">
-		<header class="deed-show-title"><strong><%= @user.name %>'s</strong> Completed Deeds</header>
-	</div>
-	<div class="col-xs-6 text-right">
-		<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
-		<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
-	</div>
-</div>
-<!-- </div>
- --><!-- </div> -->
-<!-- <div class="deed-container"> -->
 	<div class="row">
 
-	<!-- <div class="deed-container"> -->
+		<!-- Page Title -->
+		<div class="col-xs-6 text-left">
+			<header class="deed-show-title"><strong><%= @user.name %>'s</strong> <small>Completed Deeds</small></header>
+		</div>
+
+		<!-- Create deed and Back to profile buttons -->
+		<div class="col-xs-6 text-right">
+			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
+		</div>
+	</div>
+<!-- </div>
+--><!-- </div> -->
+
+<!-- Deed cards -->
+<div class="row">
 	<% @deeds.each do |d| %>
 	<div class="col-md-4">
 		<br>
-		<div class="deedcard">
-			<strong><%= d.to_id %></strong><br>
-			<%= d.body %>
+
+
+
+		<div class="deed-card">
+			<div class="deed-body">
+				<%= d.body %>
+			</div>
+			
+			<div class="deed-name">
+				<strong><%= d.to_id %></strong>
+			</div>
+			
 		</div>
 	</div>
-<!-- 	</div> -->
-
 	<% end %>
-	</div>
+</div>
 </div>

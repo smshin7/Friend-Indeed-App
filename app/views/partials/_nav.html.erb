@@ -3,15 +3,16 @@
 		<div class="navbar-header">
 		</div>
 		
+		<!-- Logo -->
 		<p class="navbar-text"><span class="bluegrey">friend</span>indeed </p>
 		
-		<!-- Displays the current user helper method if user is logged in -->
+		<!-- Signin | Signout links -->
 		<div class="pull-right">
 			<div class="navbar-right-override">
-			<% if current_user %>
+				<% if current_user %>
 				Welcome <strong><%= link_to current_user.name, current_user %></strong>! |
-				<%= link_to "Sign out", signout_path, id: "sign_out"%>
-			<% end %>
+				<%= link_to "Sign out", signout_path, id: "sign_out", class: "ltblue" %>
+				<% end %>
 			</div>
 		</div>
 	</div>
