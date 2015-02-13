@@ -4,28 +4,23 @@
 <div class="deed-container">
 	<div class="row">
 
-		<!-- Page Title -->
+		<!-- Deeds#Index Title Bar-->
 		<div class="col-xs-6 text-left">
-			<header class="deed-show-title"><strong><%= @user.name %>'s</strong> <small>Completed Deeds</small></header>
+			<header class="completed-deeds-title"><strong><%= @user.name %>'s</strong> <small>Completed Deeds</small></header>
 		</div>
 
-		<!-- Create deed and Back to profile buttons -->
+		<!-- "Create deed" and "Back to profile" buttons -->
 		<div class="col-xs-6 text-right">
 			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
 			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
 		</div>
 	</div>
-<!-- </div>
---><!-- </div> -->
 
 <!-- Deed cards -->
 <div class="row">
 	<% @deeds.each do |d| %>
 	<div class="col-md-4">
 		<br>
-
-
-
 		<div class="deed-card">
 			<div class="deed-body">
 				<%= d.body %>

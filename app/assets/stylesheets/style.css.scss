@@ -12,19 +12,14 @@ body {
 .ltblue{
 	color: #49e2f2
 }
-.set-width {
-	width: 80%;
-}
-.deed-show-title {
+.completed-deeds-title {
 	font-size: 28px;
 }
-// .deed-header-container {
-// 	margin-left: 2%;
-// 	margin-right: 2%;
-// }
-
+#sign_out:hover {
+	text-decoration: none;
+}
 /************************************/
-/********* HOMEPAGE BAR *************/
+/********* Landing Page *************/
 /************************************/
 .friendindeed p {
 	color: #ffffff;
@@ -48,6 +43,8 @@ body {
 	border-bottom-style: solid;
 	border-radius: 0px;
 }
+
+/******* landing page logo line ********/
 .navbar-override {
 	height: 70px
 }
@@ -99,9 +96,9 @@ strong > a:hover {
 	padding: 20px 25px;
 	text-decoration: none;
 	border: solid 1px #ffffff;
-	position: absolute;
-	bottom: 70px;
-	right: 90px;
+	// position: absolute;
+	// bottom: 70px;
+	// right: 90px;
 }
 .btn-signin:hover,
 .btn-signin:focus{
@@ -154,6 +151,8 @@ strong > a:hover {
 	transition: background-color 0.3s ease-out, 
 	border-color 0.3s ease-in;
 }
+
+// Fixes width on Profile button :)
 .btn-profile{
 	width: auto;
 }
@@ -203,7 +202,6 @@ strong > a:hover {
 	font-size: 14px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
 	margin-bottom: 10px;
-	// position: relative;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -214,81 +212,11 @@ strong > a:hover {
 .deed-name{
 	font-size: 24px;
 	font-weight: bold;
-	// position: absolute;
-	// bottom: 0px;
-	// padding-left: 10px;
-	// padding-right: 10px;
 	text-align: center;	
-	border-top: lightgrey 1px solid;
+	border-top: #D3D3D3 1px solid;
 }
 .deed-name-border {
 	border: black 1px solid;
 	width: 50%;
 	padding: 0 10px;
-}
-
-// .card-container {
-// 	width: 80%;
-// 	// display: block;
-
-// }
-/***** DUMP **********/
-
-// .friendindeed p::before,
-// .friendindeed p::after {
-// 	content: "";
-// 	display: inline-block;
-// 	height: 1px;
-// 	position: relative;
-// 	vertical-align: middle;
-// 	width: 20%;
-// 	background: rgba(0, 0, 0, 0.2);
-// }
-// .btn-fb {
-//     background:  #3B5998;
-//     border-radius: 4px;
-//     color: #ffffff;
-//     font-size: 18px;
-//     padding: 10px 15px;
-//     border: 1px solid #3B5998;
-//     width: 140px;
-//     height: auto;
-// }
-// .fblogo{
-//     background-image: url("fb-logo-29.png");
-//     background-repeat: no-repeat;
-//     margin-left: 18px;
-//     background-size: contain;
-//     position: inline-block;
-
-// }
-// .fb-logo-txt {
-//     margin-left: 27px;
-// }
-
-/************************************/
-/************** SOMETHING **************/
-/************************************/
-// .row {
-// 	margin-top:  80px;
-// 	height: 525px;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// }
-.bggrid {
-	// background-color: black;
-	background-color: transparent;
-}
-.blah {
-	width: auto;
-	height: 500px;
-	border: 1px solid white;
-
-}
-.pagenum {
-	font-size: 350px;
-	font-weight: bold;
-	color: #ffffff;
-	text-align: center;
-	// line-height: 164px;
 }
