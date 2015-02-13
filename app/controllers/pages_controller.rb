@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 		end
 
 		if current_user
-			redirect_to users_path(current_user)
+			redirect_to user_path(current_user)
 		else
 			render :homepage
 		end
