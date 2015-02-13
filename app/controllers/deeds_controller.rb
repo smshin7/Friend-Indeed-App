@@ -15,7 +15,7 @@ class DeedsController < ApplicationController
     current_user.deeds.new(params.require(:deed).permit!)
 
     if current_user.save
-      redirect_to user_path(current_user)
+      redirect_to user_deeds_path(current_user)
     else
       render :new
     end

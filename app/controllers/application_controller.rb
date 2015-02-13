@@ -3,11 +3,16 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :set_deed
+
+  def set_deed
+  	@deed = Deed.new
+  end
 
   def authenticate
     render json: 'Authentication required.' unless ApiKey.exists?(token: params[:token])
   end
-  
+ 
   private
   
   def current_user
