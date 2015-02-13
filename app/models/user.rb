@@ -13,9 +13,22 @@ class User < ActiveRecord::Base
     end
   end
   
+  def large_fb_image
+    "http://graph.facebook.com/#{self.uid}/picture?type=large"
+  end
+
+  def small_fb_image
+    "http://graph.facebook.com/#{self.uid}/picture?type=small"
+  end
+
+  def normal_fb_image
+    "http://graph.facebook.com/#{self.uid}/picture?type=normal"
+  end
+
   def generate_token
     self.token = SecureRandom.urlsafe_base64
   end
 
   validates :name, presence: true
+  
 end
