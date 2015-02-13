@@ -18,6 +18,5 @@ class User < ActiveRecord::Base
   end
 
   validates :name, presence: true
-  validates :token, presence: true
   
 end
