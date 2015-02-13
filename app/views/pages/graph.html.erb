@@ -61,6 +61,7 @@
         .attr("markerWidth", 6)
         .attr("markerHeight", 6)
         .attr("orient", "auto")
+        // .call(tip)
       .append("path")
         .attr("d", "M0,-5L10,0L0,5");
 
@@ -75,7 +76,10 @@
       .enter().append("circle")
         .attr("r", "8px")
         // .style("fill", "url(http://graph.facebook.com/" + "10202438725968492"   + "/picture");
-        .call(force.drag);
+
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
+        .call(force.drag)
         // console.log(nodes);
 
     var text = svg.append("g").selectAll("text")
@@ -86,6 +90,12 @@
         // .style("fill", });
         .text(function(d) { return d.name; });
 
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        // return "<strong>Frequency:</strong> <span style='color:red'>" + d + "</span>";
+      });
     // Use elliptical arc path segments to doubly-encode directionality.
     function tick() {
       path.attr("d", linkArc);
