@@ -14,6 +14,9 @@
 		<h4>Invited by <%= link_to @referrer.name, user_path(@referrer) %></h4>
 		<% end %>
 		
+		<%= image_tag(@user.large_fb_image) %>
+
+
 		<!-- Fb Share, Create deed, Show deed buttons -->
 		<div class="col-sm-3">
 			<% if @user == current_user %>

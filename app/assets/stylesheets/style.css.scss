@@ -18,6 +18,7 @@ body {
 #sign_out:hover {
 	text-decoration: none;
 }
+
 /************************************/
 /********* Landing Page *************/
 /************************************/
@@ -86,7 +87,7 @@ strong > a:hover {
 }
 
 /************************************/
-/************** BUTTON **************/
+/************* BUTTONS **************/
 /************************************/
 .btn-signin {
 	background: transparent;
@@ -96,9 +97,6 @@ strong > a:hover {
 	padding: 20px 25px;
 	text-decoration: none;
 	border: solid 1px #ffffff;
-	// position: absolute;
-	// bottom: 70px;
-	// right: 90px;
 }
 .btn-signin:hover,
 .btn-signin:focus{
@@ -184,7 +182,7 @@ strong > a:hover {
 }
 .fblogo:hover {
 	transition: background-color 0.2s ease-out, 
-	border-color 0.2s ease-in;	
+				border-color 0.2s ease-in;	
 	border: 1px  solid white
 }
 
@@ -194,16 +192,14 @@ strong > a:hover {
 .deed-container {
 	width: 90%;
 	margin: auto;
-	position: relative;
 }
 .deed-card{
 	background-color: white;
 	height: 380px;
-	font-size: 14px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
-	margin-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
+	position: relative;
 }
 .deed-body{
 	font-size: 18px;
@@ -214,6 +210,11 @@ strong > a:hover {
 	font-weight: bold;
 	text-align: center;	
 	border-top: #D3D3D3 1px solid;
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	padding-top: 10px;
+	margin-bottom: 10px;
 }
 .deed-name-border {
 	border: black 1px solid;
