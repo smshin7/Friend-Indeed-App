@@ -1,5 +1,8 @@
 <h1><%= @user.name %>'s profile</h1>
 
+<%= image_tag(current_user.large_fb_image) %>
+
+
 <% if @referrer == nil %>
   <h4>Original User</h4>
 <% else %>
