@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   post 'auth/failure' => redirect('/')
   get 'signout' => 'sessions#destroy'
   post 'signout' => 'sessions#destroy'
+
+  get 'connections' => 'pages#graph'
+
+  namespace :api do
+    resources :users
+  end
 end

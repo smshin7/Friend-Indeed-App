@@ -9,7 +9,10 @@ class ApplicationController < ActionController::Base
   	@deed = Deed.new
   end
 
-
+  def authenticate
+    render json: 'Authentication required.' unless ApiKey.exists?(token: params[:token])
+  end
+ 
   private
   
   def current_user

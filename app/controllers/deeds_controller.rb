@@ -10,6 +10,8 @@ class DeedsController < ApplicationController
   end
 
   def create
+    
+    current_user = User.find(params[:user_id]) unless current_user
     current_user.deeds.new(params.require(:deed).permit!)
 
     if current_user.save

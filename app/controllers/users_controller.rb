@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]) # scott
-    @referrer = User.find_by(uid: @user.referrer) #Daniel
+    @user = User.find(params[:id])
+    @referrer = User.find_by(token: @user.referrer)
   end
 
 end
