@@ -12,7 +12,9 @@
 
 		<!-- "Create deed" and "Back to profile" buttons -->
 		<div class="col-xs-6 text-right">
-			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<% if @user == current_user %>
+				<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<% end %>
 			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
 		</div>
 	</div> <!-- Closes title bar -->

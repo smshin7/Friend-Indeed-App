@@ -10,7 +10,6 @@ class DeedsController < ApplicationController
   end
 
   def create
-    
     current_user = User.find(params[:user_id]) unless current_user
     current_user.deeds.new(params.require(:deed).permit!)
 
@@ -37,10 +36,8 @@ class DeedsController < ApplicationController
 
   def destroy
     get_deed
-    
-    if @deed.destroy
-      redirect_to root_path
-    end
+    @deed.destroy
+     redirect_to user_deeds_path(current_user)
   end
 
   private

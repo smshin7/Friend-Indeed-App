@@ -11,7 +11,7 @@
 		<% if @referrer == nil %>
 		<h4>Original User</h4>
 		<% else %>
-		<h4>Invited by <%= link_to @referrer.name, user_path(@referrer) %></h4>
+		<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
 		<% end %>
 		
 		<%= image_tag(@user.large_fb_image) %>
@@ -36,7 +36,8 @@
 
 		<!-- D3 Graph -->
 		<div class="col-sm-9">
-			d3 graph
+			<svg id="graph"></svg>
 		</div>
 	</div>
+
 </div>

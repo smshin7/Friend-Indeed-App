@@ -118,14 +118,14 @@ body {
 
 footer {
 	background-color: white;
-  padding: 20px 0;
+ 	padding: 20px 0;
 }
 footer .glyphicon {
-  color: #333333;
-  font-size: 60px;
+	color: #333333;
+	font-size: 60px;
 }
 footer .glyphicon:hover {
-  color: #306d9f;
+	color: #306d9f;
 }
 
 
@@ -266,8 +266,8 @@ strong > a:hover {
 	font-weight: bold;
 	color: #F15545;
 }
-.modal-margin {
-	margin-top: 200px;
+.edit-deed-margin {
+	margin-top: 150px;
 }
 /************************************/
 /************ DEED CARD *************/
@@ -320,4 +320,13 @@ strong > a:hover {
 .link-divider {
 	color: #3E5967;
 	font-size: 18px;
+}
+.invited_link {
+	font-size: 18px;
+	color: #49E2f2;
+	font-weight: bold;
+}
+.invited_link:hover {
+	color: #FFFFFF;
+	text-decoration: none
 }

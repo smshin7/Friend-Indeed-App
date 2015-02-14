@@ -1,4 +1,7 @@
-<script>
+<%= render "partials/nav" %>
+
+<script type="text/javascript">
+
     d3.json("http://localhost:3000/api/users", function(root){
     
     var links =[];
@@ -35,7 +38,7 @@
     });
 
     var width = 1300,
-        height = 500;
+        height = 400;
 
     var force = d3.layout.force()
         .nodes(d3.values(nodes))
@@ -104,4 +107,5 @@
       return "translate(" + d.x + "," + d.y + ")";
     }
   });
+
 </script>
