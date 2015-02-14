@@ -1,4 +1,10 @@
+html {
+	height: 100%;
+	width: 100%;
+}
 body {
+	height: 100%;
+	width: 100%;
 	background-color: #F15545;
 	font-family: 'Raleway', sans-serif;
 	color: #3E5967;
@@ -32,8 +38,10 @@ body {
 	padding: 0px;
 	background-color: #F15545;
 	width: 360px;
+	z-index: 2;
 }
 .navbar {
+	height: 128px;
 	background-color: transparent;
 	border-top: 0px;
 	border-right: 0px;
@@ -42,11 +50,77 @@ body {
 	border-color: white;
 	border-bottom-style: solid;
 	border-radius: 0px;
+	z-index: 2;
 }
+.pad-section {
+  padding: 50px 0;
+}
+
+#intro {
+	background: url(background1.jpg) no-repeat center center fixed;
+  display: table;
+  height: 75%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#about {
+  background-color: #F15545; 
+  height: auto;
+  margin: 0 auto; 
+  width: 100%; 
+  position: relative; 
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+  color: #fff;
+
+}
+#middle-image {
+  background: url(background2.jpg) no-repeat center center fixed;
+  display: table;
+  height: 60%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#howtouse {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+#howtouse .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+footer {
+	background-color: white;
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
 
 /******* landing page logo line ********/
 .navbar-override {
-	height: 70px
+	height: 70px;
 }
 
 /************************************/
@@ -86,24 +160,20 @@ strong > a:hover {
 }
 
 /************************************/
-/************** BUTTON **************/
+/************** BUTTONS *************/
 /************************************/
 .btn-signin {
-	background: transparent;
+	background-color: #3B5998;
 	border-radius: 4px;
 	color: #ffffff;
 	font-size: 30px;
 	padding: 20px 25px;
 	text-decoration: none;
-	border: solid 1px #ffffff;
-	// position: absolute;
-	// bottom: 70px;
-	// right: 90px;
 }
 .btn-signin:hover,
 .btn-signin:focus{
 	background-color: white;
-	color: #F15545;
+	color: #3B5998;
 	outline: none;
 	transition: background-color 0.3s ease-out, 
 				border-color 0.3s ease-in;
@@ -216,7 +286,7 @@ strong > a:hover {
 	width: 90%;
 	position: absolute;
 	bottom: 0;
-		margin-right: 5%;
+	margin-right: 5%;
 	margin-left: 5%;
 	margin-bottom: 10px;
 	padding-top: 10px;
