@@ -202,9 +202,10 @@ strong > a:hover {
 .deed-card{
 	background-color: white;
 	height: 380px;
+	font-size: 14px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	margin-bottom: 10px;
 	position: relative;
-	width: 100%;
 }
 .deed-body{
 	font-size: 18px;
@@ -215,11 +216,11 @@ strong > a:hover {
 	font-weight: bold;
 	text-align: center;	
 	border-top: #D3D3D3 1px solid;
+	width: 90%;
 	position: absolute;
 	bottom: 0;
-	width: 90%;
-	padding-top: 10px;
-	margin-left: 5%;
 	margin-right: 5%;
+	margin-left: 5%;
 	margin-bottom: 10px;
+	padding-top: 10px;
 }
