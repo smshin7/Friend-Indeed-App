@@ -16,13 +16,19 @@ body {
 	color: #ffffff;
 }
 .ltblue{
-	color: #49e2f2
+	color: #49E2f2
 }
 .completed-deeds-title {
 	font-size: 28px;
 }
 #sign_out:hover {
 	text-decoration: none;
+}
+.iconfb {
+	font-family: 'Sacramento', cursive;
+	font-size: 300px;
+	margin-left: 400px;
+
 }
 
 /************************************/
@@ -154,7 +160,9 @@ footer .glyphicon:hover {
 .navbar-right-override > a:hover {
 	color: #49e2f2;
 }
-
+.height-override {
+	height: 100px;
+}
 /************************************/
 /****** Signin | Signout links ******/
 /************************************/
@@ -167,25 +175,16 @@ strong > a:hover {
 }
 
 /************************************/
-
-/************* BUTTONS **************/
-/************************************/
-.btn-signin {
-	background: transparent;
-	border-radius: 0px;
-}
 /************** BUTTONS *************/
 /************************************/
 .btn-signin {
 	background-color: #3B5998;
-	border-radius: 4px;
-
+	border-radius: 0px;
 	color: #ffffff;
 	font-size: 30px;
 	padding: 20px 25px;
 	text-decoration: none;
 	border: solid 1px #ffffff;
-
 }
 .btn-signin:hover,
 .btn-signin:focus{
@@ -197,7 +196,6 @@ strong > a:hover {
 	cursor: pointer;
 	text-decoration: none
 }
-
 .btn-custom {
 	background: transparent;
 	border-radius: 0px;
@@ -209,7 +207,6 @@ strong > a:hover {
 	height: auto;
 	margin: 5px 0px;
 	outline: none;
-	
 }
 .btn-custom:hover,
 .btn-custom:focus {
@@ -238,20 +235,24 @@ strong > a:hover {
 	transition: background-color 0.3s ease-out, 
 				border-color 0.3s ease-in;
 }
-
-/************************************/
-/*** Fixes width on Profile button **/
-/************************************/
+// Fixes width on Profile button 
 .btn-profile{
 	width: auto;
 }
-
-/************************************/
-/***** Removes button outline *******/
-/************************************/
+// Removes button outline 
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
 	outline: none;
+}
+.btn-fbshare {
+	width: 142px;
+	height: 48px;
+	margin: 5px 0;
+}
+.btn-fbshare:hover {
+	transition: background-color 0.2s ease-out, 
+				border-color 0.2s ease-in;	
+	border: 1px  solid white
 }
 
 /************************************/
@@ -265,18 +266,9 @@ strong > a:hover {
 	font-weight: bold;
 	color: #F15545;
 }
-
-.fblogo {
-	width: 142px;
-	height: 48px;
-	margin: 5px 0;
+.modal-margin {
+	margin-top: 200px;
 }
-.fblogo:hover {
-	transition: background-color 0.2s ease-out, 
-				border-color 0.2s ease-in;	
-	border: 1px  solid white
-}
-
 /************************************/
 /************ DEED CARD *************/
 /************************************/
@@ -308,4 +300,24 @@ strong > a:hover {
 	margin-left: 5%;
 	margin-bottom: 10px;
 	padding-top: 10px;
+}
+.deed-option {
+	text-align: right;
+	width: 100%;
+	position: absolute;
+	bottom: 60px;
+	padding-right: 5%;
+
+}
+.deed-link {
+	font-size: 18px;
+	color: #3E5967
+}
+.deed-link:hover {
+	color: #49e2f2;
+	text-decoration: none;
+}
+.link-divider {
+	color: #3E5967;
+	font-size: 18px;
 }

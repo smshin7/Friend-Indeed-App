@@ -1,5 +1,6 @@
 <%= render "partials/nav" %>
 <%= render "partials/deedmodal" %>
+<%#= render "partials/editdeedmodal" %>
 
 <div class="deed-container">
 	<div class="row">
@@ -14,9 +15,8 @@
 			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
 			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
 		</div>
-	</div>
+	</div> <!-- Closes title bar -->
 
-	<!-- Deed cards -->
 	<div class="row">
 		<% @deeds.each do |d| %>
 		<div class="col-md-4">
@@ -24,18 +24,19 @@
 			<div class="deed-card">
 				<div class="deed-body">
 					<%= d.body %>
-				</div>		
+				</div>	
 
-			
+				<div class="deed-option">
+					<%= link_to "edit", edit_user_deed_path(d.user,d), class: "deed-link" %> <span class="link-divider">|</span> <%= link_to "delete", root_path,class: "deed-link" %>
+				</div>
 
-			<div class="deed-name">
-				<strong><%= d.to_id %></strong>
-				<%= link_to "edit", edit_user_deed_path(d.user,d) %>
-			</div>	
 
+				<div class="deed-name">
+					<strong><%= d.to_id %></strong>
+				</div>	
+			</div>
 		</div>
-	</div>
+		<% end %>
+	</div> <!-- Closes Deed card -->
 
-	<% end %>
-</div>
-</div>
+</div> <!-- Closes Deed container -->
