@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Deed, type: :model do
+  it "should have a user" do
+    deed = FactoryGirl.build(:deed)
+    expect(deed.user.present?).to eq(true)
+  end
+
   it "is invalid without body" do
     deed = FactoryGirl.build(:deed, body: nil)
     expect(deed).to be_invalid
