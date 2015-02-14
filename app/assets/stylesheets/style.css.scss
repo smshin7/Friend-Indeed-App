@@ -57,25 +57,15 @@ body {
 }
 
 #intro {
-	background: url(background1.jpg);
+	background: url(background1.jpg) no-repeat center center fixed;
   display: table;
-  height: 50%;
+  height: 75%;
   position: relative;
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index: 1;
-  position: 10px;
-}
-#home {
-  background-color: black; 
-  height: auto;  
-  margin: 0 auto; 
-  width: 100%; 
-  position: relative; 
-  padding: 200px 0;
 }
 #about {
   background-color: #F15545; 
@@ -87,6 +77,17 @@ body {
   padding: 100px 0;
   color: #fff;
 
+}
+#middle-image {
+  background: url(background2.jpg) no-repeat center center fixed;
+  display: table;
+  height: 60%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #howtouse {
   background-color: #306d9f;
