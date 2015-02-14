@@ -16,18 +16,17 @@
 		</div>
 	</div>
 
-<!-- Deed cards -->
-<div class="row">
-	<% @deeds.each do |d| %>
-	<div class="col-md-4">
-		<br>
-		<div class="deed-card">
-			<div class="deed-body">
-				<%= d.body %>
+	<!-- Deed cards -->
+	<div class="row">
+		<% @deeds.each do |d| %>
+		<div class="col-md-4">
+			<br>
+			<div class="deed-card">
+				<div class="deed-body">
+					<%= d.body %>
+				</div>		
 
-			</div>		
-
-			</div>
+			
 
 			<div class="deed-name">
 				<strong><%= d.to_id %></strong>
