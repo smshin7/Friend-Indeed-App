@@ -27,9 +27,12 @@
 			</div>		
 			<div class="deed-name">
 				<strong><%= d.to_id %></strong>
-			</div>		
+				<%= link_to "edit", edit_user_deed_path(d.user,d) %>
+			</div>	
+
 		</div>
 	</div>
+
 	<% end %>
 </div>
 </div>

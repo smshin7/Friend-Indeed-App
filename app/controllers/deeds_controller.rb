@@ -2,7 +2,7 @@ class DeedsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @deeds = @user.deeds
+    @deeds = @user.deeds.all.order(created_at: :desc)
   end
 
   def new
@@ -27,11 +27,9 @@ class DeedsController < ApplicationController
 
   def update
     get_deed
-
-    @deed.update(deed_params)
-
-    if current_user.save
-      redirect_to root_path
+    
+    if @deed.update_attributes(deed_params)
+      redirect_to user_deeds_path(current_user)
     else
       render :edit
     end
@@ -48,11 +46,11 @@ class DeedsController < ApplicationController
   private
 
   def deed_params
-    pararms.require(:deed).permit!
+    params.require(:deed).permit!
   end
 
   def get_deed
-    @deed = current_user.deed.find(params[:id])
+    @deed = current_user.deeds.find(params[:id])
   end
 
 
