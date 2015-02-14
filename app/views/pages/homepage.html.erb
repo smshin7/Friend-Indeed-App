@@ -5,24 +5,61 @@
 </div>
 
 <!-- Section 1 -->
-<section id="intro" data-speed="6" data-type="background">
-    <div class="container">
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%>   
-    </div>
+<section id="intro" >
+
 </section>
 
-<!-- Section 2 -->
-<section id="home" data-speed="4" data-type="background">
-    <div class="container">
-        More content goes here!
+<!-- second section - About -->
+<div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        <h1>Welcome to FriendIndeed!</h1>
+        <p>FriendIndeed is a way for people to connect with other people who want to promote genuine acts of selflessness. Our passion comes from being able to see regular people want to make change in the world with very small deeds.</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="text-center" style="margin-top: 50px">
+         <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%>
+        </div>
+      </div>
     </div>
-</section>
-
-<!-- Section 3 -->
-<section id="about" data-speed="2" data-type="background">
-    <div class="container">
-        This is the final section!
-    </div>
-</section>
-
+  </div>
 </div>
+<!-- /second section -->
+
+<!-- third section - Services -->
+<div id="howtouse" class="pad-section">
+  <div class="container">
+    <h2 class="text-center">How to Use</h2> <hr />
+    <div class="row text-center">
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-user"> </i>
+        <h4>Sign Up</h4>
+        <p>Create a FriendIndeed account using Facebook to join our community of good doers.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-heart"> </i>
+        <h4>Add Deeds</h4>
+        <p>Write out the deeds that you did for your friends. Make sure that they continue to pass on good will to others.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-share"> </i>
+        <h4>Share</h4>
+        <p>Share the app on your friends' Facebook timelines. Other people who sign up by viewing the app will be connected to you.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-refresh"> </i>
+        <h4>View Connections!</h4>
+        <p>See how your good deeds can influence you friends and even people you may not even know! Doing good things can be awesome and help promote altruism.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /third section -->
+
+<footer>
+  <hr />
+  <div class="container">
+    <p class="text-right">Copyright &copy; FriendIndeed 2015</p>
+  </div>
+</footer>
