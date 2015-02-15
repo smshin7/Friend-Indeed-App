@@ -1,19 +1,83 @@
-<div class="navbar navbar-override">
-	<div class="friendindeed text-center">
-		<p><span class="bluegrey"> friend</span>indeed </p>
-	</div>
-</div>
+<!-- <div class="navbar">
+  <div class="navbar_logo">
+    <div class="friendindeed text-center fid_logo">
+      <span class="bluegrey_logo">&nbsp;friend</span><span class="white_logo">indeed&nbsp;</span>
+      <hr id="logo_line">
+    </div>
+  </div>
+</div> -->
 
+<!-- Section 1 -->
+<section id="intro" class="layer">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-6 pull-left fid_logo_alt">
+          <!-- <span class="bluegrey">&nbsp;friend</span><span class="white">indeed&nbsp;</span> -->
+        </div>
+        <div class="col-sm-6">
+          <div class="text-center" style="margin-top: 50px">
+           <!-- <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-<section id="slide1">
-	<div class="row">
-		<div class="col-md-3">
-		</div>
-		
-		<div class="col-md-9">	
-			<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%>		
-		</div>
-	</div>
 </section>
+
+<!-- second section - About -->
+<div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h1><small><div class="friendindeed fid_logo"><span class="bluegrey">friend</span><span class="white">indeed</span></div></h1>
+        <p style="margin-top: 30px" class="lead">FriendIndeed is a way for people to connect with other people who want to promote genuine acts of selflessness. Our passion comes from being able to see regular people want to make change in the world with very small deeds.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center" style="margin-top: 50px">
+         <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- /second section -->
+
+<section id="middle-image">
+</section>
+
+<!-- third section - Services -->
+<div id="howtouse" class="pad-section">
+  <div class="container">
+    <h2 class="text-center">How to Use</h2> <hr />
+    <div class="row text-center">
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-user"> </i>
+        <h4>Sign Up</h4>
+        <p>Create a FriendIndeed account using Facebook to join our community of good doers.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-heart"> </i>
+        <h4>Add Deeds</h4>
+        <p>Write out the deeds that you did for your friends. Make sure that they continue to pass on good will to others.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-share"> </i>
+        <h4>Share</h4>
+        <p>Share the app on your friends' Facebook timelines. Other people who sign up by viewing the app will be connected to you.</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-refresh"> </i>
+        <h4>View Connections!</h4>
+        <p>See how your good deeds can influence you friends and even people you may not even know! Doing good things can be awesome and help promote altruism.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /third section -->
+
+<footer>
+  <div class="container">
+    <p class="pull-left">App created by Daniel Kim, Scott Shin, Daniel Mendoza for General Assembly</p>
+    <p class="text-right">Copyright &copy; FriendIndeed 2015</p>
+  </div>
+</footer>
