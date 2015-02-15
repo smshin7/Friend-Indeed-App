@@ -1,4 +1,5 @@
 class DeedsController < ApplicationController
+  before_action :authorize
 
   def index
     @user = User.find(params[:user_id])
@@ -37,7 +38,7 @@ class DeedsController < ApplicationController
   def destroy
     get_deed
     @deed.destroy
-     redirect_to user_deeds_path(current_user)
+    redirect_to user_deeds_path(current_user)
   end
 
   private
