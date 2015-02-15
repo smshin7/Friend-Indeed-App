@@ -1,12 +1,48 @@
-<div class='navbar navbar-default height-override'>
+<nav class='navbar navbar-default height-override'>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- Logo -->
+			<a href="/"><p class="navbar-text"><span class="bluegrey">friend</span><span class="white">indeed</span></p></a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+				<li><%= link_to "profile", current_user %></li>
+				<li><%= link_to "connections", connections_path %></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				
+					<% if current_user %>
+						<li>
+						<%= link_to current_user.name, current_user %>
+						</li>
+						<li>
+						<%= link_to "Sign out", signout_path, class: "ltblue" %>
+						</li>
+
+					<% end %>
+				
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+<hr id="nav_line">
+
+
+
+
+<!-- 
 			<div class="col-xs-6">
-				<!-- Logo -->
-				<a href="/"><p class="navbar-text"><span class="bluegrey">friend</span><span class="white">indeed</span></p></a>
-			</div>
-			<div class="col-xs-6">
-				<!-- Signin | Signout links -->
+				Signin | Signout links
 				<div class="navbar-right-override pull-right">
 					<% if current_user %>
 					Welcome <strong><%= link_to current_user.name, current_user %></strong>! |
@@ -19,5 +55,5 @@
 		</div>
 	</div>
 </div>
-<hr id="nav_line">
+<hr id="nav_line"> -->
 

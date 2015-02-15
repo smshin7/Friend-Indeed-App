@@ -33,7 +33,16 @@ body {
 #sign_out:hover {
 	text-decoration: none;
 }
-
+.filogo {
+	font-size: 300px;
+		font-family: 'Sacramento', cursive;
+		text-align: center;
+}
+.bg {
+	background-color: blue;
+	padding: 15px;
+	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}	
 /************************************/
 /*********** Landing Page ***********/
 /************************************/
@@ -193,6 +202,19 @@ footer .glyphicon:hover {
 #nav_line {
 	margin-top: -35px;
 }
+.nav_links {
+	font-size: 20px;
+}
+
+.nav > li > a {
+	position: relative;
+	display: block;
+	padding-left: 20px;
+	padding-right: 0px;
+	font-size: 18px;
+	margin-top: 28px;
+}
+
 /************************************/
 /****** Signin | Signout links ******/
 /************************************/
