@@ -1,3 +1,4 @@
+<!-- <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> -->
 <script>
     d3.json("http://localhost:3000/api/users", function(root){
     
@@ -16,10 +17,10 @@
           if (arr[i]['referrer'] == null){
             arr[i]['referrer'] = arr[i]['token'];
 
-            links.push({source: arr[i], target: arr[i], type: ''});
+            links.push({id: arr[i]['id'], source: arr[i], target: arr[i], picture: "http://graph.facebook.com/" + arr[i]['uid'] + "/picture"});
           }
           else {
-            links.push({source: arr[i], target: arr[i], type: 'suit'});
+            links.push({id: arr[i]['id'], source: arr[i], target: arr[i], type: 'suit', picture: "http://graph.facebook.com/" + arr[i]['uid'] + "/picture"});
           };
         // }
         // console.log(arr[i].deeds[0].from_id);
@@ -29,13 +30,13 @@
       // Compute the distinct nodes from the links.
 
     links.forEach(function(link) {
-      console.log(link);
-      link.source = nodes[link.source['referrer']] || (nodes[link.source['referrer']] = {name: link.source.name});
-      link.target = nodes[link.target['token']] || (nodes[link.target['token']] = {name: link.target.name});
+      // console.log(link);
+      link.source = nodes[link.source['referrer']] || (nodes[link.source['referrer']] = {name: link.source.name, token: link.source.token, referrer: link.target.referrer});
+      link.target = nodes[link.target['token']] || (nodes[link.target['token']] = {name: link.target.name, token: link.target.token, referrer: link.target.referrer});
     });
 
-    var width = 1300,
-        height = 500;
+    var width = 1250,
+        height = 590;
 
     var force = d3.layout.force()
         .nodes(d3.values(nodes))
@@ -46,10 +47,18 @@
         .on("tick", tick)
         .start();
 
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<img src='" + d.picture + "'><span style='color:white'>" + d.name + "</span>";
+    });
+
     var svg = d3.select("body").append("svg")
         .attr("width", width + "px")
         .attr("height", height + "px");
 
+    svg.call(tip);        
     // Per-type markers, as they don't inherit styles.
     svg.append("defs").selectAll("marker")
         .data(["suit", "licensing", "resolved"])
@@ -61,7 +70,6 @@
         .attr("markerWidth", 6)
         .attr("markerHeight", 6)
         .attr("orient", "auto")
-        // .call(tip)
       .append("path")
         .attr("d", "M0,-5L10,0L0,5");
 
@@ -69,18 +77,44 @@
         .data(force.links())
       .enter().append("path")
         .attr("class", function(d) { return "link " + d.type; })
-        .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+        .attr("marker-end", function(d) {   return "url(#" + d.type + ")"; });
 
     var circle = svg.append("g").selectAll("circle")
         .data(force.nodes())
       .enter().append("circle")
         .attr("r", "8px")
-        // .style("fill", "url(http://graph.facebook.com/" + "10202438725968492"   + "/picture");
+        .style("fill", "white")
+        .on('mouseover', function(d, nodes){ 
+               d3.select(this)
+                .attr("r", "20px")
+                .style("fill", "red")
+                  .on('click', function(){
+                    var node = force.nodes();
+                    var group = [];
 
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide)
-        .call(force.drag)
-        // console.log(nodes);
+                    for(i = 0; i < node.length; i++){
+                      if (node[i]['referrer'] == d.token) {
+                        group.push(node[i]);
+                      }
+
+                    d3.selectAll("circle")
+                      .data(force.nodes())
+                      .style("fill", "black");
+                    };
+                    // console.log(group);
+                  })
+                tip.show(d);
+                console.log(d.picture);
+        })
+
+        .on('mouseout', function(d){
+          d3.select(this)
+            .attr("r", "8px")
+            .style("fill", "white")
+            tip.hide(d)
+            // .attr("xlink:href", "url(http://graph.facebook.com/10202438725968492/picture)");
+        })
+        .call(force.drag);
 
     var text = svg.append("g").selectAll("text")
         .data(force.nodes())
@@ -88,14 +122,8 @@
         .attr("x", 0)
         .attr("y", 0)
         // .style("fill", });
-        .text(function(d) { return d.name; });
+        // .text(function(d) { return ad.name; });
 
-    var tip = d3.tip()
-      .attr('class', 'd3-tip')
-      .offset([-10, 0])
-      .html(function(d) {
-        // return "<strong>Frequency:</strong> <span style='color:red'>" + d + "</span>";
-      });
     // Use elliptical arc path segments to doubly-encode directionality.
     function tick() {
       path.attr("d", linkArc);
@@ -104,7 +132,7 @@
     }
 
     function linkArc(d) {
-      var dx = d.target.x - d.source.x,
+      var dx = d.target.x - d.source.x, 
           dy = d.target.y - d.source.y,
           dr = Math.sqrt(dx * dx + dy * dy);
       return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
