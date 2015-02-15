@@ -18,47 +18,58 @@ body {
 .ltblue{
 	color: #49E2f2
 }
+.blue{
+	color: #306D9F
+}
+.oj {
+	color: #F15545
+}
+.green {
+	color: #06CC97
+}
 .completed-deeds-title {
 	font-size: 28px;
 }
 #sign_out:hover {
 	text-decoration: none;
 }
-.iconfb {
-	font-family: 'Sacramento', cursive;
-	font-size: 300px;
-	margin-left: 400px;
-
-}
 
 /************************************/
 /*********** Landing Page ***********/
 /************************************/
-.friendindeed p {
+
+.bluegrey_logo {
+	color: #3E5967;
+	background-color: #F15545
+}
+.white_logo{
 	color: #ffffff;
+	background-color: #F15545
+}
+.fid_logo {
 	font-family: 'Sacramento', cursive;
 	font-size: 90px;
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	padding: 0px;
+	z-index: 2;
 	background-color: #F15545;
-	width: 360px;
+	position: relative;
+}
+#logo_line {
+	margin-top: -55px;
 	z-index: 2;
 }
-.navbar {
-	height: 128px;
-	background-color: transparent;
-	border-top: 0px;
-	border-right: 0px;
-	border-bottom: 1px;
-	border-left: 0px;
-	border-color: white;
-	border-bottom-style: solid;
-	border-radius: 0px;
-	z-index: 2;
-}
+// .navbar > .navbar_logo {
+// 	// background-color: #F15545;
+// 	margin-bottom: 35px;
+// 	border-top: 0px;
+// 	border-right: 0px;
+// 	border-bottom: 0px;
+// 	border-left: 0px;
+// 	border-color: transparent;
+// 	border-bottom-style: solid;
+// 	border-radius: 0px;
+// 	// z-index: 2;
+// }
+
 .pad-section {
   padding: 50px 0;
 }
@@ -115,7 +126,6 @@ body {
 
 /************************************/
 /****** landing page logo line ******/
-
 footer {
 	background-color: white;
  	padding: 20px 0;
@@ -128,15 +138,22 @@ footer .glyphicon:hover {
 	color: #306d9f;
 }
 
-
-/******* landing page logo line ********/
-.navbar-override {
-	height: 70px;
-}
-
 /************************************/
 /************** NAVBAR **************/
 /************************************/
+.navbar {
+	background-color: #F15545;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-color: white;
+	border-bottom-style: solid;
+	border-radius: 0px;
+	z-index: 2;
+	margin-bottom: 35px;
+}
+
 .navbar-default 
 .navbar-text {
 	color: #ffffff;
@@ -162,6 +179,9 @@ footer .glyphicon:hover {
 }
 .height-override {
 	height: 100px;
+}
+#nav_line {
+	margin-top: -35px;
 }
 /************************************/
 /****** Signin | Signout links ******/
