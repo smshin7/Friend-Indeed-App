@@ -13,6 +13,6 @@ class PagesController < ApplicationController
 	end
 
 	def graph
-		
+		# @pikture = "http://graph.facebook.com/" + d.uid + "/picture?type=small"
 	end
 end
