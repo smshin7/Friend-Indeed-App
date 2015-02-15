@@ -53,6 +53,13 @@ body {
 	background-color: #F15545;
 	position: relative;
 }
+.fid_logo_alt {
+	font-family: 'Sacramento', cursive;
+	font-size: 90px;
+	z-index: 2;
+	background-color: transparent;
+	position: relative;
+}
 #logo_line {
 	margin-top: -55px;
 	z-index: 2;
@@ -73,9 +80,11 @@ body {
 .pad-section {
   padding: 50px 0;
 }
-
+.layer {
+	background-color: rgba(0,0,0,.5)
+}
 #intro {
-	background: url(background1.jpg) no-repeat center center fixed;
+  background: url(background1.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
   position: relative;
@@ -84,6 +93,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-top: 40px;
 }
 #about {
   background-color: #F15545; 

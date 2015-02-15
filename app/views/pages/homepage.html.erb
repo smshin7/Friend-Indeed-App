@@ -1,16 +1,29 @@
 <div class="navbar">
   <div class="navbar_logo">
-	<div class="friendindeed text-center fid_logo">
-		<span class="bluegrey_logo">&nbsp;friend</span><span class="white_logo">indeed&nbsp;</span>
-  	<div>
+   <div class="friendindeed text-center fid_logo">
+    <span class="bluegrey_logo">&nbsp;friend</span><span class="white_logo">indeed&nbsp;</span>
+
       <hr id="logo_line">
-    </div>
-</div>
+    
+  </div>
 </div>
 </div>
 
 <!-- Section 1 -->
-<section id="intro">
+<section id="intro" class="layer">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-6 pull-left fid_logo_alt">
+          <!-- <span class="bluegrey">&nbsp;friend</span><span class="white">indeed&nbsp;</span> -->
+        </div>
+        <div class="col-sm-6">
+          <div class="text-center" style="margin-top: 50px">
+           <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn-signin"%>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </section>
 
 <!-- second section - About -->
