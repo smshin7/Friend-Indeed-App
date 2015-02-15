@@ -9,6 +9,7 @@
 		</div>
 
 		<!-- Fb Share, Create deed, Show deed buttons -->
+
 		<div class="col-sm-6">
 			<!-- User Profile Title Bar -->
 			<h1><%= @user.name %>'s profile</h1>
@@ -18,6 +19,7 @@
 			<h4>Original User</h4>
 			<% else %>
 			<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
+
 			<% end %>
 
 			<div class="bg">
