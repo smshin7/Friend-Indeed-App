@@ -1,21 +1,23 @@
-<div class='navbar navbar-default bg-override'>
+<div class='navbar navbar-default height-override'>
 	<div class="container-fluid">
-		<div class="navbar-header">
-		</div>
-		
-		<!-- Logo -->
-		<p class="navbar-text"><span class="bluegrey">friend</span>indeed </p>
-		
-		<!-- Signin | Signout links -->
-		<div class="pull-right">
-			<div class="navbar-right-override">
-				<% if current_user %>
-				Welcome <strong><%= link_to current_user.name, current_user %></strong>! |
-				<%= link_to "Sign out", signout_path, id: "sign_out", class: "ltblue" %>
-				<% end %>
+		<div class="row">
+			<div class="col-xs-6">
+				<!-- Logo -->
+				<a href="/"><p class="navbar-text"><span class="bluegrey">friend</span><span class="white">indeed</span></p></a>
 			</div>
+			<div class="col-xs-6">
+				<!-- Signin | Signout links -->
+				<div class="navbar-right-override pull-right">
+					<% if current_user %>
+					Welcome <strong><%= link_to current_user.name, current_user %></strong>! |
+					<%= link_to "Sign out", signout_path, id: "sign_out", class: "ltblue" %>
+					<% end %>
+				</div>
+			</div>
+
+		</div>
 		</div>
 	</div>
 </div>
-
+<hr id="nav_line">
 

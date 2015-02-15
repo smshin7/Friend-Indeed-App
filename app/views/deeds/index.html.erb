@@ -1,5 +1,6 @@
 <%= render "partials/nav" %>
 <%= render "partials/deedmodal" %>
+<%#= render "partials/editdeedmodal" %>
 
 <div class="deed-container">
 	<div class="row">
@@ -11,26 +12,33 @@
 
 		<!-- "Create deed" and "Back to profile" buttons -->
 		<div class="col-xs-6 text-right">
-			<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<% if @user == current_user %>
+				<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+			<% end %>
 			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
 		</div>
-	</div>
+	</div> <!-- Closes title bar -->
 
-<!-- Deed cards -->
-<div class="row">
-	<% @deeds.each do |d| %>
-	<div class="col-md-4">
-		<br>
-		<div class="deed-card">
-			<div class="deed-body">
-				<%= d.body %>
+	<div class="row">
+		<% @deeds.each do |d| %>
+		<div class="col-md-4">
+			<br>
+			<div class="deed-card">
+				<div class="deed-body">
+					<%= d.body %>
+				</div>	
+
+				<div class="deed-option">
+					<%= link_to "edit", edit_user_deed_path(d.user,d), class: "deed-link" %> <span class="link-divider">|</span> <%= link_to "delete", root_path,class: "deed-link" %>
+				</div>
+
+
+				<div class="deed-name">
+					<strong><%= d.to_id %></strong>
+				</div>	
 			</div>
-			<div class="deed-name">
-				<strong><%= d.to_id %></strong>
-			</div>
-			
 		</div>
-	</div>
-	<% end %>
-</div>
-</div>
+		<% end %>
+	</div> <!-- Closes Deed card -->
+
+</div> <!-- Closes Deed container -->

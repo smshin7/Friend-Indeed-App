@@ -1,3 +1,23 @@
-<h1>Edit your deed</h1>
+<!-- Edit Deed Static Modal -->
+<div class="modal show ">
+	<div class="modal-dialog">
+		<div class="modal-content edit-deed-margin">
+			<div class="modal-header">
+			<h4 class="modal-title" id="myModalLabel">Edit Deed</h4>
+			</div>
 
-<%= form_for %>
+			<div class="modal-body">
+				<%= form_for [@deed.user, @deed] do |f| %>
+				<div class="form-group">
+					<%= f.text_field :to_id, placeholder: "I did a deed for...", class: "form-control id-width" %>
+				</div>
+				<div class="form-group">
+					<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
+					<br>
+					<%= f.submit "Save", class: "btn-custom-alt" %> 
+				</div>
+				<% end %>	
+			</div> <!-- Closes Edit Form -->
+
+		</div>
+	</div>

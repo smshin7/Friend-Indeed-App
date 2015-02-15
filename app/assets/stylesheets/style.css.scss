@@ -16,7 +16,16 @@ body {
 	color: #ffffff;
 }
 .ltblue{
-	color: #49e2f2
+	color: #49E2f2
+}
+.blue{
+	color: #306D9F
+}
+.oj {
+	color: #F15545
+}
+.green {
+	color: #06CC97
 }
 .completed-deeds-title {
 	font-size: 28px;
@@ -24,40 +33,58 @@ body {
 #sign_out:hover {
 	text-decoration: none;
 }
+
 /************************************/
-/********* Landing Page *************/
+/*********** Landing Page ***********/
 /************************************/
-.friendindeed p {
+
+.bluegrey_logo {
+	color: #3E5967;
+	background-color: #F15545
+}
+.white_logo{
 	color: #ffffff;
+	background-color: #F15545
+}
+.fid_logo {
 	font-family: 'Sacramento', cursive;
 	font-size: 90px;
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	padding: 0px;
+	z-index: 2;
 	background-color: #F15545;
-	width: 360px;
-	z-index: 2;
+	position: relative;
 }
-.navbar {
-	height: 128px;
+.fid_logo_alt {
+	font-family: 'Sacramento', cursive;
+	font-size: 90px;
+	z-index: 2;
 	background-color: transparent;
-	border-top: 0px;
-	border-right: 0px;
-	border-bottom: 1px;
-	border-left: 0px;
-	border-color: white;
-	border-bottom-style: solid;
-	border-radius: 0px;
+	position: relative;
+}
+#logo_line {
+	margin-top: -55px;
 	z-index: 2;
 }
+// .navbar > .navbar_logo {
+// 	// background-color: #F15545;
+// 	margin-bottom: 35px;
+// 	border-top: 0px;
+// 	border-right: 0px;
+// 	border-bottom: 0px;
+// 	border-left: 0px;
+// 	border-color: transparent;
+// 	border-bottom-style: solid;
+// 	border-radius: 0px;
+// 	// z-index: 2;
+// }
+
 .pad-section {
   padding: 50px 0;
 }
-
+.layer {
+	background-color: rgba(0,0,0,.5)
+}
 #intro {
-	background: url(background1.jpg) no-repeat center center fixed;
+  background: url(background1.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
   position: relative;
@@ -66,6 +93,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-top: 40px;
 }
 #about {
   background-color: #F15545; 
@@ -105,27 +133,37 @@ body {
   width: 140px;
 }
 
+
+/************************************/
+/****** landing page logo line ******/
 footer {
 	background-color: white;
-  padding: 20px 0;
+ 	padding: 20px 0;
 }
 footer .glyphicon {
-  color: #333333;
-  font-size: 60px;
+	color: #333333;
+	font-size: 60px;
 }
 footer .glyphicon:hover {
-  color: #306d9f;
-}
-
-
-/******* landing page logo line ********/
-.navbar-override {
-	height: 70px;
+	color: #306d9f;
 }
 
 /************************************/
 /************** NAVBAR **************/
 /************************************/
+.navbar {
+	background-color: #F15545;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-color: white;
+	border-bottom-style: solid;
+	border-radius: 0px;
+	z-index: 2;
+	margin-bottom: 35px;
+}
+
 .navbar-default 
 .navbar-text {
 	color: #ffffff;
@@ -149,8 +187,15 @@ footer .glyphicon:hover {
 .navbar-right-override > a:hover {
 	color: #49e2f2;
 }
-
-/** signin | signout links **/
+.height-override {
+	height: 100px;
+}
+#nav_line {
+	margin-top: -35px;
+}
+/************************************/
+/****** Signin | Signout links ******/
+/************************************/
 strong > a {
 	color: #3E5967;
 }
@@ -164,11 +209,12 @@ strong > a:hover {
 /************************************/
 .btn-signin {
 	background-color: #3B5998;
-	border-radius: 4px;
+	border-radius: 0px;
 	color: #ffffff;
 	font-size: 30px;
 	padding: 20px 25px;
 	text-decoration: none;
+	border: solid 1px #ffffff;
 }
 .btn-signin:hover,
 .btn-signin:focus{
@@ -180,10 +226,9 @@ strong > a:hover {
 	cursor: pointer;
 	text-decoration: none
 }
-
 .btn-custom {
 	background: transparent;
-	border-radius: 4px;
+	border-radius: 0px;
 	color: #ffffff;
 	font-size: 18px;
 	padding: 10px 15px;
@@ -192,19 +237,18 @@ strong > a:hover {
 	height: auto;
 	margin: 5px 0px;
 	outline: none;
-	
 }
 .btn-custom:hover,
 .btn-custom:focus {
 	background: #ffffff;
 	color: #F15545;
 	transition: background-color 0.3s ease-out, 
-	border-color 0.3s ease-in;
+				border-color 0.3s ease-in;
 	text-decoration: none;
 }
 .btn-custom-alt {
 	background: #F15545;
-	border-radius: 4px;
+	border-radius: 0px;
 	color: #FFFFFF;
 	font-size: 18px;
 	padding: 10px 15px;
@@ -219,20 +263,26 @@ strong > a:hover {
 	background: #FFFFFF;
 	color: #F15545;
 	transition: background-color 0.3s ease-out, 
-	border-color 0.3s ease-in;
+				border-color 0.3s ease-in;
 }
-
-// Fixes width on Profile button :)
+// Fixes width on Profile button 
 .btn-profile{
 	width: auto;
 }
-
-/************************************/
-/***** Removes button outline *******/
-/************************************/
+// Removes button outline 
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
 	outline: none;
+}
+.btn-fbshare {
+	width: 142px;
+	height: 48px;
+	margin: 5px 0;
+}
+.btn-fbshare:hover {
+	transition: background-color 0.2s ease-out, 
+				border-color 0.2s ease-in;	
+	border: 1px  solid white
 }
 
 /************************************/
@@ -246,18 +296,9 @@ strong > a:hover {
 	font-weight: bold;
 	color: #F15545;
 }
-
-.fblogo {
-	width: 142px;
-	height: 48px;
-	margin: 5px 0;
+.edit-deed-margin {
+	margin-top: 150px;
 }
-.fblogo:hover {
-	transition: background-color 0.2s ease-out, 
-	border-color 0.2s ease-in;	
-	border: 1px  solid white
-}
-
 /************************************/
 /************ DEED CARD *************/
 /************************************/
@@ -271,7 +312,6 @@ strong > a:hover {
 	font-size: 14px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
 	margin-bottom: 10px;
-
 	position: relative;
 }
 .deed-body{
@@ -290,4 +330,33 @@ strong > a:hover {
 	margin-left: 5%;
 	margin-bottom: 10px;
 	padding-top: 10px;
+}
+.deed-option {
+	text-align: right;
+	width: 100%;
+	position: absolute;
+	bottom: 60px;
+	padding-right: 5%;
+
+}
+.deed-link {
+	font-size: 18px;
+	color: #3E5967
+}
+.deed-link:hover {
+	color: #49e2f2;
+	text-decoration: none;
+}
+.link-divider {
+	color: #3E5967;
+	font-size: 18px;
+}
+.invited_link {
+	font-size: 18px;
+	color: #49E2f2;
+	font-weight: bold;
+}
+.invited_link:hover {
+	color: #FFFFFF;
+	text-decoration: none
 }
