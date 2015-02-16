@@ -79,18 +79,6 @@ body {
 	margin-top: -55px;
 	z-index: 2;
 }
-// .navbar > .navbar_logo {
-// 	// background-color: #F15545;
-// 	margin-bottom: 35px;
-// 	border-top: 0px;
-// 	border-right: 0px;
-// 	border-bottom: 0px;
-// 	border-left: 0px;
-// 	border-color: transparent;
-// 	border-bottom-style: solid;
-// 	border-radius: 0px;
-// 	// z-index: 2;
-// }
 
 .pad-section {
   padding: 50px 0;
@@ -99,7 +87,8 @@ body {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
-  background: url(background2.jpg) no-repeat center center fixed;
+	background: url('http://i.imgur.com/XH0xtZP.jpg') no-repeat center center fixed;
+	// background-image: url(background2.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
   position: relative;
@@ -108,7 +97,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // margin-top: 40px;
 }
 #about {
   background-color: #F15545; 
@@ -122,7 +110,7 @@ body {
 
 }
 #middle-image {
-  background: url(background1.jpg) no-repeat center center fixed;
+	background: url('http://i.imgur.com/M93VCSn.jpg') no-repeat center center fixed;
   display: table;
   height: 60%;
   position: relative;
@@ -435,6 +423,6 @@ footer .glyphicon:hover {
 	font-weight: bold;
 }
 .invited_link:hover {
-	color: #FFFFFF;
+	color: #3E5967;
 	text-decoration: none
 }

@@ -14,15 +14,15 @@ class User < ActiveRecord::Base
   end
   
   def large_fb_image
-    "http://graph.facebook.com/#{self.uid}/picture?type=large"
+    "https://graph.facebook.com/#{self.uid}/picture?type=large"
   end
 
   def small_fb_image
-    "http://graph.facebook.com/#{self.uid}/picture?type=small"
+    "https://graph.facebook.com/#{self.uid}/picture?type=small"
   end
 
   def normal_fb_image
-    "http://graph.facebook.com/#{self.uid}/picture?type=normal"
+    "https://graph.facebook.com/#{self.uid}/picture?type=normal"
   end
 
   def generate_token
