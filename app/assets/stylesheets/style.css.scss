@@ -1,10 +1,3 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "style";
-@import "d3all";
-@import url(https://fonts.googleapis.com/css?family=Sacramento);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
 html {
 	height: 100%;
 	width: 100%;
@@ -86,18 +79,6 @@ body {
 	margin-top: -55px;
 	z-index: 2;
 }
-// .navbar > .navbar_logo {
-// 	// background-color: #F15545;
-// 	margin-bottom: 35px;
-// 	border-top: 0px;
-// 	border-right: 0px;
-// 	border-bottom: 0px;
-// 	border-left: 0px;
-// 	border-color: transparent;
-// 	border-bottom-style: solid;
-// 	border-radius: 0px;
-// 	// z-index: 2;
-// }
 
 .pad-section {
   padding: 50px 0;
@@ -106,7 +87,8 @@ body {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
-	background: url(background2.jpg) no-repeat center center fixed;
+	background: asset-data-url("background2.jpg") no-repeat center center fixed;
+	// background-image: url(background2.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
   position: relative;
@@ -115,7 +97,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // margin-top: 40px;
 }
 #about {
   background-color: #F15545; 
@@ -129,7 +110,7 @@ body {
 
 }
 #middle-image {
-	background: url(background1.jpg) no-repeat center center fixed;
+	background: asset-data-url("background1.jpg") no-repeat center center fixed;
   display: table;
   height: 60%;
   position: relative;
