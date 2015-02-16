@@ -250,6 +250,27 @@ footer .glyphicon:hover {
 	text-decoration: none;
 	outline: none;
 }
+
+// Header collapse menu icon
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #49E2f2;
+}
+.navbar-default .navbar-toggle:hover .icon-bar {
+	background-color: #FFFFFF;
+}
+.navbar-default .navbar-toggle:focus .icon-bar {
+	background-color: #FFFFFF;
+}
+.navbar-default .navbar-toggle {
+	border-color: #49E2f2;
+}
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	background-color: #49E2f2;
+	transition: background-color 0.2s ease-out, 
+				border-color 0.2s ease-in;
+}
+
 /************************************/
 /****** Signin | Signout links ******/
 /************************************/
