@@ -1,4 +1,4 @@
-<%= render "partials/nav" %>
+# <%= render "partials/nav" %>
 <%= render "partials/deedmodal" %>
 
 <div class="container-fluid">
@@ -30,7 +30,8 @@
 				<% if @user == current_user %>
 				<!-- Facebook Share button -->
 				<!-- <div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div> -->
-				<a target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>"><img class="btn-fbshare" src="/assets/fb_share2.svg"></a>
+				<!-- <a target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>"><img class="btn-fbshare" src="/assets/fb_share2.svg"></a> -->
+				<div class="fb-share-button" data-href="https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" data-layout="button"></div>
 				<br>
 				
 				<!-- Create deed button -->
