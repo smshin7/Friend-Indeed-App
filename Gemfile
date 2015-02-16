@@ -43,6 +43,8 @@ gem 'pry-rails'
 
 gem 'passenger'
 
+gem 'carrierwave'
+
 
 group :production do
   gem 'rails_12factor'
