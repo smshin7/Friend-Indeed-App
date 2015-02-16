@@ -38,11 +38,17 @@ body {
 		font-family: 'Sacramento', cursive;
 		text-align: center;
 }
+
+// profile box
 .bg {
-	background-color: blue;
+	background-color: #FFFFFF;
 	padding: 15px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
-}	
+}
+
+.profilepic_box img{
+	border: 1px solid #3E5967;
+}
 /************************************/
 /*********** Landing Page ***********/
 /************************************/
@@ -214,17 +220,46 @@ footer .glyphicon:hover {
 	font-size: 18px;
 	margin-top: 28px;
 }
-
+// Links on Navbar
+.navbar-default .navbar-nav > li > a {
+	color: #3E5967
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #49E2f2
+}
+.link-margin-override {
+	font-size: 16px;
+	margin-top: 40px;
+}
+.link_override {
+	font-size: 16px;
+	color:  #3E5967
+}
+.link_override:hover,
+.link_override:focus {
+	font-size: 16px;
+	color:  #49E2f2;
+	text-decoration: none;
+	outline: none;
+}
+.li_override {
+	color: #3E5967;
+}
+.li_override:hover,
+.li_override:focus {
+	text-decoration: none;
+	outline: none;
+}
 /************************************/
 /****** Signin | Signout links ******/
 /************************************/
-strong > a {
-	color: #3E5967;
-}
-strong > a:hover {
-	color: #49e2f2;
-	text-decoration: none;
-}
+// strong > a {
+// 	color: #3E5967;
+// }
+// strong > a:hover {
+// 	color: #49e2f2;
+// 	text-decoration: none;
+// }
 
 /************************************/
 /************** BUTTONS *************/
@@ -297,12 +332,14 @@ strong > a:hover {
 .btn-fbshare {
 	width: 142px;
 	height: 48px;
-	margin: 5px 0;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .btn-fbshare:hover {
 	transition: background-color 0.2s ease-out, 
 				border-color 0.2s ease-in;	
-	border: 1px  solid white
+	border: 1px  solid white;
+	color: black;
 }
 
 /************************************/
@@ -315,6 +352,7 @@ strong > a:hover {
 	font-size: 20px;
 	font-weight: bold;
 	color: #F15545;
+	z-index: 2
 }
 .edit-deed-margin {
 	margin-top: 150px;
