@@ -11,7 +11,11 @@
 		<!-- Fb Share, Create deed, Show deed buttons -->
 
 		<div class="col-sm-6">
-			<!-- User Profile Title Bar -->
+
+
+			<div class="bg">
+				<div class="profilepic_box">
+							<!-- User Profile Title Bar -->
 			<h1><%= @user.name %>'s profile</h1>
 
 			<!-- User account type: Original User or Invited by -->
@@ -21,9 +25,8 @@
 			<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
 
 			<% end %>
-
-			<div class="bg">
 				<%= image_tag(@user.large_fb_image) %>
+				</div>
 				<% if @user == current_user %>
 				<!-- Facebook Share button -->
 				<!-- <div class="fb-share-button" data-href="http://tictacdoge.firebaseapp.com/?ref_id=<%= @user.uid %>" data-layout="button"></div> -->
@@ -31,12 +34,12 @@
 				<br>
 				
 				<!-- Create deed button -->
-				<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+				<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
 				<% end %>
 				<br>
 
 				<!-- Show deed button -->
-				<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom" %>
+				<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom-alt" %>
 			</div>
 		</div>
 
