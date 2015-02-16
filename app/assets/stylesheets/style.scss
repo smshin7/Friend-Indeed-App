@@ -106,7 +106,7 @@ body {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
-	background: url('https://s3-us-west-2.amazonaws.com/friend-indeed-dev/background2.jpg?X-Amz-Date=20150216T045015Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=332f22786cf65ed5b82e8b289a480957ce157b790096a2fff02a9017048d152c&X-Amz-Credential=ASIAINT32VMINMWQJLEQ/20150216/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEPv//////////wEagAKvMxkBcnriZGHbtsylGh8a5/o/Rh4kczKLiDJxalGFhHkKQKj6q6gdnUR3SIR/kH7iy4R8WsMnfO9sl80Qy9YPuK6E4O3qlqXnAGMrv8YlAYrxPXEmlk370s4vXhXBgBhzUXl1npX4zAjXIhvtBuk8BXNKtDMudgoIA4uE8fR5xzfTJKAsPVF78DMZv%2BtMpteaFdrEuJsOS9BjrhPWJFkcl7jMTynG94hhtRgXDoO9ikJTmAKrcdksm2n9EsLvL3TZGBwMyYiHuRVAzSVkOvhpSdhXXoQG2qvcV2Z2UaMeAWUOB3B5VSPANRZzkZ/rt2jqDkid4OzXvASi0XBW57w8ILalhacF') no-repeat center center fixed;
+	background: url(background2.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
   position: relative;
@@ -129,7 +129,7 @@ body {
 
 }
 #middle-image {
-	background: url('https://s3-us-west-2.amazonaws.com/friend-indeed-dev/background1.jpg?X-Amz-Date=20150216T044854Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=5c6ea8e03ecb9c2b02034516d5210af71cc0e13948920653223d0315574f9bf5&X-Amz-Credential=ASIAINT32VMINMWQJLEQ/20150216/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEPv//////////wEagAKvMxkBcnriZGHbtsylGh8a5/o/Rh4kczKLiDJxalGFhHkKQKj6q6gdnUR3SIR/kH7iy4R8WsMnfO9sl80Qy9YPuK6E4O3qlqXnAGMrv8YlAYrxPXEmlk370s4vXhXBgBhzUXl1npX4zAjXIhvtBuk8BXNKtDMudgoIA4uE8fR5xzfTJKAsPVF78DMZv%2BtMpteaFdrEuJsOS9BjrhPWJFkcl7jMTynG94hhtRgXDoO9ikJTmAKrcdksm2n9EsLvL3TZGBwMyYiHuRVAzSVkOvhpSdhXXoQG2qvcV2Z2UaMeAWUOB3B5VSPANRZzkZ/rt2jqDkid4OzXvASi0XBW57w8ILalhacF') no-repeat center center fixed;
+	background: url(background1.jpg) no-repeat center center fixed;
   display: table;
   height: 60%;
   position: relative;
