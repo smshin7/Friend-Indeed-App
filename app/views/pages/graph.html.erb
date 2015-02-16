@@ -1,7 +1,7 @@
 <%= render "partials/nav" %>
 
 <script>
-    d3.json("http://localhost:3000/api/users", function(root){
+    d3.json("https://friendindeed.herokuapp.com/api/users", function(root){
     
     var links =[];
 
@@ -45,7 +45,7 @@
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<center><img src='http://graph.facebook.com/" + d.uid + "/picture?type=normal'><br><br><span style='color:white'>" + d.name + "</span></center>";
+        return "<center><img src='https://graph.facebook.com/" + d.uid + "/picture?type=normal'><br><br><span style='color:white'>" + d.name + "</span></center>";
     });
 
     var svg = d3.select("body").append("svg")
