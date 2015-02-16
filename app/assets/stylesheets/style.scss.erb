@@ -87,7 +87,7 @@ body {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
-	background: asset-data-url("background2.jpg") no-repeat center center fixed;
+	background: url("<% asset_path('background2.jpg') %>") no-repeat center center fixed;
 	// background-image: url(background2.jpg) no-repeat center center fixed;
   display: table;
   height: 75%;
@@ -110,7 +110,7 @@ body {
 
 }
 #middle-image {
-	background: asset-data-url("background1.jpg") no-repeat center center fixed;
+	background: asset-data-url("<% asset_path('background2.jpg') %>") no-repeat center center fixed;
   display: table;
   height: 60%;
   position: relative;
