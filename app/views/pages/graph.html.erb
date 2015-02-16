@@ -12,38 +12,31 @@
       var arrleng = arr.length;
       
       for (var i = 0; i < arrleng; i++) {
-        // console.log(arr[i]);
-        // for(var j = 0; arr[i].deeds.length; i++) {
-          // console.log(arr[i].deeds[j]);
           if (arr[i]['referrer'] == null){
             arr[i]['referrer'] = arr[i]['token'];
-
-            links.push({id: arr[i]['id'], source: arr[i], target: arr[i], picture: "http://graph.facebook.com/" + arr[i]['uid'] + "/picture"});
+            links.push({uid: arr[i]['uid'], source: arr[i], target: arr[i]});
           }
           else {
-            links.push({id: arr[i]['id'], source: arr[i], target: arr[i], type: 'suit', picture: "http://graph.facebook.com/" + arr[i]['uid'] + "/picture"});
+            links.push({uid: arr[i]['uid'], source: arr[i], target: arr[i], type: 'suit'});
           };
-        // }
-        // console.log(arr[i].deeds[0].from_id);
       };
     };
+    
     var nodes = {};
-      // Compute the distinct nodes from the links.
 
     links.forEach(function(link) {
-      // console.log(link);
-      link.source = nodes[link.source['referrer']] || (nodes[link.source['referrer']] = {name: link.source.name, token: link.source.token, referrer: link.target.referrer});
-      link.target = nodes[link.target['token']] || (nodes[link.target['token']] = {name: link.target.name, token: link.target.token, referrer: link.target.referrer});
+      link.source = nodes[link.source['referrer']] || (nodes[link.source['referrer']] = {name: link.source.name, token: link.source.token, referrer: link.source.referrer, uid: link.source.uid});
+      link.target = nodes[link.target['token']] || (nodes[link.target['token']] = {name: link.target.name, token: link.target.token, referrer: link.target.referrer, uid: link.target.uid});
     });
 
-    var width = 1250,
+    var width = 1200,
         height = 590;
 
     var force = d3.layout.force()
         .nodes(d3.values(nodes))
         .links(links)
         .size([width, height])
-        .linkDistance(100)
+        .linkDistance(70)
         .charge(-300)
         .on("tick", tick)
         .start();
@@ -52,12 +45,15 @@
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<img src='" + d.picture + "'><span style='color:white'>" + d.name + "</span>";
+        return "<center><img src='http://graph.facebook.com/" + d.uid + "/picture?type=normal'><br><br><span style='color:white'>" + d.name + "</span></center>";
     });
 
     var svg = d3.select("body").append("svg")
         .attr("width", width + "px")
-        .attr("height", height + "px");
+        .attr("height", height + "px")
+        .style("background-color", "white")
+        .style("margin", "auto auto 20px auto")
+        .style("display", "block");
 
     svg.call(tip);        
     // Per-type markers, as they don't inherit styles.
@@ -83,37 +79,47 @@
     var circle = svg.append("g").selectAll("circle")
         .data(force.nodes())
       .enter().append("circle")
-        .attr("r", "8px")
-        .style("fill", "white")
-        .on('mouseover', function(d, nodes){ 
-               d3.select(this)
-                .attr("r", "20px")
-                .style("fill", "red")
-                  .on('click', function(){
-                    var node = force.nodes();
-                    var group = [];
-
-                    for(i = 0; i < node.length; i++){
-                      if (node[i]['referrer'] == d.token) {
-                        group.push(node[i]);
-                      }
-
-                    d3.selectAll("circle")
-                      .data(force.nodes())
-                      .style("fill", "black");
-                    };
-                    // console.log(group);
-                  })
-                tip.show(d);
-                console.log(d.picture);
+        .attr("r", function(d){
+          if (d.token == "<%= current_user.token %>"){
+            return "15px"
+          }
+          else{
+            return "6.5px"
+          }
         })
-
+        .style("fill", function(d){
+          if (d.token == "<%= current_user.token %>"){
+            return "yellow"
+          }
+          else{
+            return "white"
+          }
+        })
+        .on('mouseover', function(d){ 
+               d3.select(this)
+                .attr("r", "15px")
+                .style("fill", "red")
+                tip.show(d);
+        })
         .on('mouseout', function(d){
           d3.select(this)
-            .attr("r", "8px")
-            .style("fill", "white")
+            .attr("r", function(d){
+          if (d.token == "<%= current_user.token %>"){
+            return "15px"
+          }
+          else{
+            return "6.5px"
+          }
+        })
+            .style("fill", function(d){
+          if (d.token == "<%= current_user.token %>"){
+            return "yellow"
+          }
+          else{
+            return "white"
+          }
+        })
             tip.hide(d)
-            // .attr("xlink:href", "url(http://graph.facebook.com/10202438725968492/picture)");
         })
         .call(force.drag);
 

@@ -9,10 +9,5 @@ class PagesController < ApplicationController
 		else
 			render :homepage
 		end
-
-	end
-
-	def graph
-		# @pikture = "http://graph.facebook.com/" + d.uid + "/picture?type=small"
 	end
 end
