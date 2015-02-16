@@ -13,23 +13,16 @@
 
 		
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			
 			<ul class="nav navbar-nav">
 				<!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-				<li><%= link_to "profile", current_user %></li>
-				<li><%= link_to "connections", connections_path %></li>
+				<li><%= link_to "profile", current_user, class: "li_override" %></li>
+				<li><%= link_to "connections", connections_path, class: "li_override" %></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-					<% if current_user %>
-						<li>
-						<%= link_to current_user.name, current_user %>
-						</li>
-						<li>
-						<%= link_to "Sign out", signout_path, class: "ltblue" %>
-						</li>
-
-					<% end %>
-				
+			<ul class="nav navbar-nav navbar-right link-margin-override">
+				<% if current_user %>
+					Welcome <%= link_to current_user.name, current_user, class: "link_override" %>! | <%= link_to "Sign out", signout_path, class: "link_override" %>
+				<% end %>	
 			</ul>
 
 		</div><!-- /.navbar-collapse -->
