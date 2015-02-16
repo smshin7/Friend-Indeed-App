@@ -15,17 +15,17 @@
 
 			<div class="bg">
 				<div class="profilepic_box">
-							<!-- User Profile Title Bar -->
-			<h1><%= @user.name %>'s profile</h1>
+					<!-- User Profile Title Bar -->
+					<h1><%= @user.name %>'s profile</h1>
 
-			<!-- User account type: Original User or Invited by -->
-			<% if @referrer == nil %>
-			<h4>Original User</h4>
-			<% else %>
-			<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
+					<!-- User account type: Original User or Invited by -->
+					<% if @referrer == nil %>
+					<h4>Original User</h4>
+					<% else %>
+					<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
 
-			<% end %>
-				<%= image_tag(@user.large_fb_image) %>
+					<% end %>
+					<%= image_tag(@user.large_fb_image) %>
 				</div>
 				<% if @user == current_user %>
 				<!-- Facebook Share button -->
