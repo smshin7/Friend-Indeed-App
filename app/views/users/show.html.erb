@@ -2,50 +2,65 @@
 <%= render "partials/deedmodal" %>
 
 <div class="container-fluid">
-	<div class="row-fluid">
+	<!-- <div class="row-fluid"> -->
 		
 
-		<div class="col-sm-3">
-		</div>
+	<!-- 	<div class="col-sm-3">
+		</div> -->
 
 		<!-- Fb Share, Create deed, Show deed buttons -->
 
-		<div class="col-sm-6">
-
-
+		<div class="col-sm-6 col-sm-offset-3">
 			<div class="bg">
-				<div class="profilepic_box">
-					<!-- User Profile Title Bar -->
-					<h1><%= @user.name %>'s profile</h1>
+				<div class="container">
+					
+						<!-- User Profile Title Bar -->
+						<h1><%= @user.name %>'s profile</h1>
 
-					<!-- User account type: Original User or Invited by -->
-					<% if @referrer == nil %>
-					<h4>Original User</h4>
-					<% else %>
-					<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
+						<!-- User account type: Original User or Invited by -->
+						<% if @referrer == nil %>
+						<h4>Original User</h4>
+						<% else %>
+						<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
 
-					<% end %>
-					<%= image_tag(@user.large_fb_image) %>
+						<% end %>
+					
 				</div>
-				<% if @user == current_user %>
-				<!-- Facebook Share button -->
-				<!-- <a target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>"><img class="btn-fbshare" src="/assets/fb_share2.svg"></a> -->
-				<br>
-				<div class="fb-share-button" data-href="https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" data-layout="button"></div>
-				<br>
-				
-				<!-- Create deed button -->
-				<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
-				<% end %>
-				<br>
+				<div class="container">
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="profilepic_box">
+								<%= image_tag(@user.large_fb_image) %>
+							</div>
+							<% if @user == current_user %>
+							<!-- Facebook Share button -->
+							<!-- <a target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>"><img class="btn-fbshare" src="/assets/fb_share2.svg"></a> -->
+							<br>
+							<div class="fb-share-button" data-href="https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" data-layout="button"></div>
+							<br>
 
-				<!-- Show deed button -->
-				<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom-alt" %>
+							<!-- Create deed button -->
+							<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+							<% end %>
+							<br>
+
+							<!-- Show deed button -->
+							<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom-alt" %>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="container">
+						<% @invited.each do |i| %>
+							<%= link_to i.name, user_path(i) %>
+						<% end %>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="col-sm-3">
-		</div>
+	<!-- 	<div class="col-sm-6">
+		</div> -->
 	</div>
 
 </div>
