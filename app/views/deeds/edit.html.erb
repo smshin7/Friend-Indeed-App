@@ -14,7 +14,7 @@
 				<div class="form-group">
 					<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
 					<br>
-					<%= f.submit "Save", class: "btn-custom-alt" %> <span><%= link_to "Cancel", user_deeds_path(current_user), class: "btn btn-custom-alt vert_fix" %></span>
+					<%= f.submit "Save", class: "btn-custom-alt btn" %> <span><%= link_to "Cancel", user_deeds_path(current_user), class: "btn btn-custom-alt" %></span>
 				</div>
 				<% end %>	
 			</div> <!-- Closes Edit Form -->

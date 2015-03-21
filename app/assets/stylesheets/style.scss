@@ -354,8 +354,8 @@ footer .glyphicon:hover {
 	color: black;
 }
 // vertical alignment fix for Cancel button in Deed Edit screen
-.vert_fix{
-	vertical-align: top
+#vert-fix{
+	margin-top: 0px;
 }
 /************************************/
 /*************** MODAL **************/
