@@ -49,6 +49,9 @@ body {
 .profilepic_box img{
 	border: 1px solid #3E5967;
 }
+.profile-btn-box {
+	padding: 0px;
+}
 /************************************/
 /*********** Landing Page ***********/
 /************************************/
@@ -350,14 +353,18 @@ footer .glyphicon:hover {
 	border: 1px  solid white;
 	color: black;
 }
-
+// vertical alignment fix for Cancel button in Deed Edit screen
+#vert-fix{
+	margin-top: 0px;
+}
 /************************************/
 /*************** MODAL **************/
 /************************************/
 .form-control {
 	color: #3E5967;
 }
-#myModalLabel {
+#myModalLabel,
+#myEditModalLabel {
 	font-size: 20px;
 	font-weight: bold;
 	color: #F15545;
@@ -412,6 +419,7 @@ footer .glyphicon:hover {
 .deed-link:hover {
 	color: #49e2f2;
 	text-decoration: none;
+	cursor: pointer;
 }
 .link-divider {
 	color: #3E5967;
@@ -424,5 +432,5 @@ footer .glyphicon:hover {
 }
 .invited_link:hover {
 	color: #3E5967;
-	text-decoration: none
+	text-decoration: none;	
 }

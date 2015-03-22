@@ -3,7 +3,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content edit-deed-margin">
 			<div class="modal-header">
-			<h4 class="modal-title" id="myModalLabel">Edit Deed</h4>
+			<h4 class="modal-title" id="myEditModalLabel">Edit Deed</h4>
 			</div>
 
 			<div class="modal-body">
@@ -14,7 +14,7 @@
 				<div class="form-group">
 					<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
 					<br>
-					<%= f.submit "Save", class: "btn-custom-alt" %> 
+					<%= f.submit "Save", class: "btn-custom-alt btn" %> <span><%= link_to "Cancel", user_deeds_path(current_user), class: "btn btn-custom-alt" %></span>
 				</div>
 				<% end %>	
 			</div> <!-- Closes Edit Form -->
@@ -22,3 +22,5 @@
 		</div>
 	</div>
 </div>
+
+ <!-- <button type="button" class="btn-custom-alt" data-dismiss="modal">Cancel</button>  -->

@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @referrer = User.find_by(token: @user.referrer)
+  	@invited = User.where(referrer: @user.token)
   end
 
 end

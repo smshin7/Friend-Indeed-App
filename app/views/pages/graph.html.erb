@@ -1,7 +1,7 @@
 <%= render "partials/nav" %>
 
 <script>
-    d3.json("../api/users", function(root){
+    d3.json("https://friendindeed.herokuapp.com/api/users", function(root){
     
     var links =[];
 
@@ -52,6 +52,7 @@
         .attr("width", width + "px")
         .attr("height", height + "px")
         .style("background-color", "white")
+        .style("box-shadow", "0 3px 9px rgba(0,0,0,.5)")
         .style("margin", "auto auto 20px auto")
         .style("display", "block");
 

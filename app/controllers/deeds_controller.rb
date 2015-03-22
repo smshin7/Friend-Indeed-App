@@ -28,7 +28,7 @@ class DeedsController < ApplicationController
   def update
     get_deed
     
-    if @deed.update_attributes(deed_params)
+    if @deed.update(deed_params)
       redirect_to user_deeds_path(current_user)
     else
       render :edit

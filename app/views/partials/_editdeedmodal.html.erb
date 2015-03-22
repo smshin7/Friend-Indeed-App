@@ -1,0 +1,35 @@
+<!-- Edit Deed Modal -->
+<div class="modal fade" id="edit-deed-modal" tabindex="-1" role="dialog" aria-labelledby="myEditModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<div class="modal-title" id="myEditModalLabel">Edit Deed</div>
+			</div>
+			<div class="modal-body">
+				<%#= form_for @deed, url: user_deeds_path(current_user) do |f| %>
+				<%#= form_for @deed, url: user_deeds_path(current_user) do |f| %>
+				<%#= form_for [@deed.user, @deed], url: edit_user_deed_path(@user_id) do |f| %>
+
+
+
+				<div class="form-group">
+					<%= f.text_field :to_id, placeholder: "I did a deed for...", class: "form-control id-width" %>
+				</div>
+				<div class="form-group">
+					<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
+					<br>
+					<%= f.submit "Save", class: "btn-custom-alt" %> <button type="button" class="btn-custom-alt" data-dismiss="modal">Cancel</button>
+				</div>
+				<% end %>	
+			</div> <!-- Closes Edit Form -->
+		</div>
+	</div>
+</div>
+
+
+<%#= form_for [@deed.user, @deed] do |f| %>
+<%#= form_for @deed, url: user_deeds_path(current_user) do |f| %>
+
+<!-- user_deed_path(d.user, d) -->
+<%#= link_to "delete", user_deed_path(d.user, d), method: :delete, data: { confirm: "Are you sure?"}, class: "deed-link" %>
