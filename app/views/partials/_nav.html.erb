@@ -16,8 +16,9 @@
 			
 			<ul class="nav navbar-nav">
 				<li class="active"><span class="sr-only">(current)</span></li>
-				<li><%= link_to "profile", current_user, class: "li_override" %></li>
-				<li><%= link_to "connections", connections_path, class: "li_override" %></li>
+        <li><%= link_to "profile", current_user, class: "li_override" %></li>
+        <li><%= link_to "how to use", about_path, class: "li_override" %></li>
+        <li><%= link_to "connections", connections_path, class: "li_override" %></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right link-margin-override">
 				<% if current_user %>

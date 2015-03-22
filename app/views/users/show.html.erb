@@ -42,7 +42,7 @@
 	<div class="col-sm-6">
 		<h4>People Invited</h4>
 			<% @invited.each do |i| %>
-			<%= link_to i.name, user_path(i) %>
+        <p><%= link_to i.name, user_path(i) %></p>
 			<% end %>
 
 	</div>
