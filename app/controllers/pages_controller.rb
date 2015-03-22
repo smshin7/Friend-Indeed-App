@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 			render :homepage
 		end
 	end
+
+  def about
+  end
+
 end

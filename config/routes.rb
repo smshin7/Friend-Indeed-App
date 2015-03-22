@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'connections' => 'pages#graph'
 
+  get 'about' => 'pages#about'
+
   namespace :api do
     resources :users
   end
