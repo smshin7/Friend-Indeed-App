@@ -2,50 +2,45 @@
 	<%= render "partials/nav" %>
 	<%= render "partials/deedmodal" %>
 
-<div class="col-md-6 col-md-offset-3 bg">				
-	<!-- User Profile Title Bar -->
-	<h1><%= @user.name %>'s profile</h1>
+	<div class="col-md-6 col-md-offset-3 bg">				
+		<!-- User Profile Title Bar -->
+		<h1><%= @user.name %>'s profile</h1>
 
-	<!-- User account type: Original User or Invited by -->
-	<% if !!@referrer %>
+		<!-- User account type: Original User or Invited by -->
+		<% if !!@referrer %>
 		<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
-	<% end %>
+		<% end %>
 
-	<hr>					
+		<hr>					
 
-	<div class="col-md-5 col-md-offset-1">
-		<div class="profilepic_box">
-			<%= image_tag(@user.large_fb_image) %>
+		<div class="col-md-5 col-md-offset-1">
+			<div class="profilepic_box">
+				<%= image_tag(@user.large_fb_image) %>
 
-			<div class="btn-box">
-				<% if @user == current_user %>
+				<div class="btn-box">
+					<% if @user == current_user %>
 
-				<!-- Facebook Share button -->
-				<a id="share_button" target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" class="btn btn-custom-fb"><i class="fa fa-facebook-official fa-1x"></i> &nbsp;Share</a>
+					<!-- Facebook Share button -->
+					<a id="share_button" target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" class="btn btn-custom-fb"><i class="fa fa-facebook-official fa-1x"></i> &nbsp;Share</a>
 
-				<!-- Create deed button -->
-				<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
-				<% end %>
+					<!-- Create deed button -->
+					<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+					<% end %>
 
-				<!-- Show deed button -->
-				<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom-alt" %>
+					<!-- Show deed button -->
+					<%= link_to "Show Deeds", user_deeds_path(@user), class: "btn btn-custom-alt" %>
 
+				</div>
 			</div>
+			<br><!-- Provides cushion at smaller res -->
 		</div>
-		<br><!-- Provides cushion at smaller res -->
-	</div>
 
-
-	<div class="col-md-5">
-		<div class="peopleInvitedTitle">People Invited</div>
+		<div class="col-md-5">
+			<div class="peopleInvitedTitle">People Invited</div>
 			<% @invited.each do |i| %>
-        <div class="peopleInvited"><%= link_to i.name, user_path(i), class: "peopleInvited" %></div>
+			<div class="peopleInvited"><%= link_to i.name, user_path(i), class: "peopleInvited" %></div>
 			<% end %>
 
+		</div>
 	</div>
-</div>
-
-	<!-- 	<div class="col-md-6">
-</div> -->
-
 </div>
