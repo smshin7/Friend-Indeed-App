@@ -18,24 +18,6 @@
   position:absolute;
   bottom: 5px;
 }
-
-.dockBottom-last {
-  bottom:0;
-  display: table;
-  width: 100%;
-  text-align: center;
-}
-
-.arrow-color {
-  color: #fff;
-  &:hover {
-    color: $ltblue;
-  }
-}
-.dockBottom-last p {
-  color: #fff;
-}
-
 .howto1 {
   background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto1.jpg') no-repeat bottom;
   max-height: 400px;
@@ -52,12 +34,28 @@
   background-size:cover
 }
 .howto4 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto4.jpg') no-repeat top;
   max-height: 400px;
   background-size:cover
 }
 .howto5 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto5.jpg') no-repeat top;
   max-height: 400px;
   background-size:cover
+}
+.dockBottom-last {
+  bottom:0;
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+.arrow-color {
+  color: #fff;
+  &:hover {
+    color: $ltblue;
+  }
+}
+.dockBottom-last p {
+  color: #fff;
 }

@@ -45,8 +45,8 @@ h1 {
 }
 .filogo {
 	font-size: 300px;
-		font-family: 'Sacramento', cursive;
-		text-align: center;
+	font-family: 'Sacramento', cursive;
+	text-align: center;
 }
 
 // profile box
@@ -111,59 +111,58 @@ h1 {
 }
 
 .pad-section {
-  padding: 50px 0;
+	padding: 50px 0;
 }
 .layer {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
 	background: url('http://i.imgur.com/XH0xtZP.jpg') no-repeat center center fixed;
-	// background-image: url(background2.jpg) no-repeat center center fixed;
-  display: table;
-  height: 75%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	display: table;
+	height: 75%;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #about {
-  background-color: #F15545; 
-  height: auto;
-  margin: 0 auto; 
-  width: 100%; 
-  position: relative; 
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 50px 0;
-  color: #fff;
+	background-color: #F15545; 
+	height: auto;
+	margin: 0 auto; 
+	width: 100%; 
+	position: relative; 
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	padding: 50px 0;
+	color: #fff;
 
 }
 #middle-image {
 	background: url('http://i.imgur.com/M93VCSn.jpg') no-repeat center center fixed;
-  display: table;
-  height: 60%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	display: table;
+	height: 60%;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #howtouse {
-  background-color: #306d9f;
-  color: #ffffff;
+	background-color: #306d9f;
+	color: #ffffff;
 }
 #howtouse .glyphicon {
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
-  height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
-  width: 140px;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 60px;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	vertical-align: middle;
+	width: 140px;
 }
 
 
@@ -172,7 +171,7 @@ h1 {
 /************************************/
 footer {
 	background-color: white;
- 	padding: 20px 0;
+	padding: 20px 0;
 }
 footer .glyphicon {
 	color: #333333;
@@ -181,19 +180,6 @@ footer .glyphicon {
 footer .glyphicon:hover {
 	color: #306d9f;
 }
-
-
-/************************************/
-/****** Signin | Signout links ******/
-/************************************/
-// strong > a {
-// 	color: #3E5967;
-// }
-// strong > a:hover {
-// 	color: #49e2f2;
-// 	text-decoration: none;
-// }
-
 
 /************************************/
 /*************** MODAL **************/
