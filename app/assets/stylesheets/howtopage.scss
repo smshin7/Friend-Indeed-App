@@ -4,43 +4,45 @@
 .howto {
   display: table;
   width:60%;
-  height: 400px;
+  height: 500px;
   padding: 20px;
   color: #fff;
-  font-size: 28px;
+  font-size: 55px;
   font-weight: bold;
   background-color: #fff;
   box-shadow: 0 3px 9px rgba(0,0,0,.5);
   margin: 30px auto;
-  position:relative
+  // position:absolute;
+  text-align: center;
 }
 .howtoTitle {
-  position:absolute;
-  bottom: 5px;
+
+  position: relative;
+  margin-top:85px;
 }
 .howto1 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto1.jpg') no-repeat bottom;
-  max-height: 400px;
+  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto1.jpg') no-repeat bottom;
+  max-height: 500px;
   background-size:cover
 }
 .howto2 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto2.jpg') no-repeat top;
-  max-height: 400px;
+  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto2.jpg') no-repeat top;
+  max-height: 500px;
   background-size:cover
 }
 .howto3 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
-  max-height: 400px;
+  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto3.jpg') no-repeat top;
+  max-height: 500px;
   background-size:cover
 }
 .howto4 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto4.jpg') no-repeat top;
-  max-height: 400px;
+  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto4.jpg') no-repeat top;
+  max-height: 500px;
   background-size:cover
 }
 .howto5 {
-  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto5.jpg') no-repeat top;
-  max-height: 400px;
+  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;
+  max-height: 500px;
   background-size:cover
 }
 .dockBottom-last {
