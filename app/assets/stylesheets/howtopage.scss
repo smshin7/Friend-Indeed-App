@@ -1,0 +1,39 @@
+.howto {
+    display: table;
+    width: 75%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    margin: 20px auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    
+}
+.howto-body {
+  font-family: $mainFont;
+  font-size: 40px;
+  color: blue;
+  text-align: center;
+  line-height: 1;
+  // position:relative;
+}
+  .dockBottom-last {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+  }
+
+  .howtoBox {
+    position:relative
+  }
+
+//   .howto-card {
+//   width: 100px;
+//   height: 200px;
+//   background-color: #FFF;
+// }

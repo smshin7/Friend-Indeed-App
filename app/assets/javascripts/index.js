@@ -1,3 +1,24 @@
+$(function(){
+  var stickerTop = parseInt($('#howtoNav').offset().top);
+  $(window).scroll(function() {
+    var movelisting = (parseInt($(window).scrollTop()) + parseInt($("#howtoNav").css('margin-top')) > stickerTop) ? '200px' : '0px';
+    $("#search-listings-container").css("marginTop", movelisting);
+
+    $("#howtoNav").css((parseInt($(window).scrollTop()) + parseInt($("#howtoNav").css('margin-top')) > stickerTop) ? {
+      position: 'fixed',
+      top: '0px',
+      left: '0px',
+    } : {
+      position: 'relative',
+    }); 
+  });
+});
+
+
+
+
+
+
 // d3.tip
 // Copyright (c) 2013 Justin Palmer
 //
@@ -24,12 +45,12 @@
   // Returns a tip
   return function() {
     var direction = d3_tip_direction,
-        offset    = d3_tip_offset,
-        html      = d3_tip_html,
-        node      = initNode(),
-        svg       = null,
-        point     = null,
-        target    = null
+    offset    = d3_tip_offset,
+    html      = d3_tip_html,
+    node      = initNode(),
+    svg       = null,
+    point     = null,
+    target    = null
 
     function tip(vis) {
       svg = getSVGNode(vis)
@@ -44,20 +65,20 @@
       var args = Array.prototype.slice.call(arguments)
       if(args[args.length - 1] instanceof SVGElement) target = args.pop()
 
-      var content = html.apply(this, args),
-          poffset = offset.apply(this, args),
-          dir     = direction.apply(this, args),
-          nodel   = d3.select(node),
-          i       = directions.length,
-          coords,
-          scrollTop  = document.documentElement.scrollTop || document.body.scrollTop,
-          scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft
+        var content = html.apply(this, args),
+      poffset = offset.apply(this, args),
+      dir     = direction.apply(this, args),
+      nodel   = d3.select(node),
+      i       = directions.length,
+      coords,
+      scrollTop  = document.documentElement.scrollTop || document.body.scrollTop,
+      scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft
 
       nodel.html(content)
-        .style({ opacity: 1, 'pointer-events': 'all' })
+      .style({ opacity: 1, 'pointer-events': 'all' })
 
       while(i--) nodel.classed(directions[i], false)
-      coords = direction_callbacks.get(dir).apply(this)
+        coords = direction_callbacks.get(dir).apply(this)
       nodel.classed(dir, true).style({
         top: (coords.top +  poffset[0]) + scrollTop + 'px',
         left: (coords.left + poffset[1]) + scrollLeft + 'px'
@@ -117,7 +138,7 @@
     // Returns tip or direction
     tip.direction = function(v) {
       if (!arguments.length) return direction
-      direction = v == null ? v : d3.functor(v)
+        direction = v == null ? v : d3.functor(v)
 
       return tip
     }
@@ -129,7 +150,7 @@
     // Returns offset or
     tip.offset = function(v) {
       if (!arguments.length) return offset
-      offset = v == null ? v : d3.functor(v)
+        offset = v == null ? v : d3.functor(v)
 
       return tip
     }
@@ -141,7 +162,7 @@
     // Returns html value or tip
     tip.html = function(v) {
       if (!arguments.length) return html
-      html = v == null ? v : d3.functor(v)
+        html = v == null ? v : d3.functor(v)
 
       return tip
     }
@@ -265,16 +286,16 @@
       var targetel   = target || d3.event.target;
 
       while ('undefined' === typeof targetel.getScreenCTM && 'undefined' === targetel.parentNode) {
-          targetel = targetel.parentNode;
+        targetel = targetel.parentNode;
       }
 
       var bbox       = {},
-          matrix     = targetel.getScreenCTM(),
-          tbbox      = targetel.getBBox(),
-          width      = tbbox.width,
-          height     = tbbox.height,
-          x          = tbbox.x,
-          y          = tbbox.y
+      matrix     = targetel.getScreenCTM(),
+      tbbox      = targetel.getBBox(),
+      width      = tbbox.width,
+      height     = tbbox.height,
+      x          = tbbox.x,
+      y          = tbbox.y
 
       point.x = x
       point.y = y

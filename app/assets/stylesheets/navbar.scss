@@ -47,7 +47,7 @@
 	height: 100px;
 }
 #nav_line {
-	margin-top: -35px;
+	margin-top: 0px;
 }
 .nav_links {
 	font-size: 20px;
@@ -100,7 +100,7 @@
 	background-color: $oj;
 }
 .navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: #FFFFFF;
+	background-color: $oj;
 }
 .navbar-default .navbar-toggle {
 	border-color: #fff;
@@ -111,4 +111,15 @@
 	background-color: #fff;
 	transition: background-color 0.2s ease-out, 
 				border-color 0.2s ease-in;
+}
+
+// Navigation for how to page
+
+.navbar-howto {
+	text-align: center;
+	width: 100%;
+	background: $oj;
+}
+ #howtoNav{
+ 	padding-top: 10px;
 }
