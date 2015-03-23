@@ -1,3 +1,10 @@
+$mainFont: 'Raleway', sans-serif;
+$bluegrey: #3E5967;
+$oj: #F15545;
+$fbBlue:#3B5998;
+$green: #06CC97;
+$ltblue: #49E2f2;
+
 html {
 	height: 100%;
 	width: 100%;
@@ -8,6 +15,9 @@ body {
 	background-color: #F15545;
 	font-family: 'Raleway', sans-serif;
 	color: #3E5967;
+}
+h1 {
+	margin: 0px;
 }
 .bluegrey {
 	color: #3E5967;
@@ -35,8 +45,8 @@ body {
 }
 .filogo {
 	font-size: 300px;
-		font-family: 'Sacramento', cursive;
-		text-align: center;
+	font-family: 'Sacramento', cursive;
+	text-align: center;
 }
 
 // profile box
@@ -45,12 +55,29 @@ body {
 	padding: 15px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
-
+.profilepic_box {
+	width:202px;
+}
 .profilepic_box img{
 	border: 1px solid #3E5967;
+	margin-bottom: 5px;
 }
 .profile-btn-box {
 	padding: 0px;
+}
+.peopleInvitedTitle {
+	font-family: $mainFont;
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.peopleInvited {
+	font-size: 18px;
+	color: $oj;
+	&:hover {
+		color: $oj;
+
+	}
 }
 /************************************/
 /*********** Landing Page ***********/
@@ -84,59 +111,58 @@ body {
 }
 
 .pad-section {
-  padding: 50px 0;
+	padding: 50px 0;
 }
 .layer {
 	background-color: rgba(0,0,0,.5)
 }
 #intro {
 	background: url('http://i.imgur.com/XH0xtZP.jpg') no-repeat center center fixed;
-	// background-image: url(background2.jpg) no-repeat center center fixed;
-  display: table;
-  height: 75%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	display: table;
+	height: 75%;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #about {
-  background-color: #F15545; 
-  height: auto;
-  margin: 0 auto; 
-  width: 100%; 
-  position: relative; 
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 50px 0;
-  color: #fff;
+	background-color: #F15545; 
+	height: auto;
+	margin: 0 auto; 
+	width: 100%; 
+	position: relative; 
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	padding: 50px 0;
+	color: #fff;
 
 }
 #middle-image {
 	background: url('http://i.imgur.com/M93VCSn.jpg') no-repeat center center fixed;
-  display: table;
-  height: 60%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	display: table;
+	height: 60%;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #howtouse {
-  background-color: #306d9f;
-  color: #ffffff;
+	background-color: #306d9f;
+	color: #ffffff;
 }
 #howtouse .glyphicon {
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
-  height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
-  width: 140px;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 60px;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	vertical-align: middle;
+	width: 140px;
 }
 
 
@@ -145,7 +171,7 @@ body {
 /************************************/
 footer {
 	background-color: white;
- 	padding: 20px 0;
+	padding: 20px 0;
 }
 footer .glyphicon {
 	color: #333333;
@@ -154,126 +180,6 @@ footer .glyphicon {
 footer .glyphicon:hover {
 	color: #306d9f;
 }
-
-/************************************/
-/************** NAVBAR **************/
-/************************************/
-.navbar {
-	background-color: #F15545;
-	border-top: 0px;
-	border-right: 0px;
-	border-bottom: 0px;
-	border-left: 0px;
-	border-color: white;
-	border-bottom-style: solid;
-	border-radius: 0px;
-	z-index: 2;
-	margin-bottom: 35px;
-}
-
-.navbar-default 
-.navbar-text {
-	color: #ffffff;
-}
-.navbar-text {
-	font-family: 'Sacramento', cursive;
-	font-size: 65px;
-	color: #ffffff;
-	margin: 0px 0px 5px 0px;
-}
-.navbar-right-override {
-	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	padding-top: 30px;
-	color: #3E5967;
-
-}
-.navbar-right-override > a {
-	color: #3E5967;
-}
-.navbar-right-override > a:hover {
-	color: #49e2f2;
-}
-.height-override {
-	height: 100px;
-}
-#nav_line {
-	margin-top: -35px;
-}
-.nav_links {
-	font-size: 20px;
-}
-
-.nav > li > a {
-	position: relative;
-	display: block;
-	padding-left: 20px;
-	padding-right: 0px;
-	font-size: 18px;
-	margin-top: 28px;
-}
-// Links on Navbar
-.navbar-default .navbar-nav > li > a {
-	color: #3E5967
-}
-.navbar-default .navbar-nav > li > a:hover {
-	color: #49E2f2
-}
-.link-margin-override {
-	font-size: 16px;
-	margin-top: 40px;
-}
-.link_override {
-	font-size: 16px;
-	color:  #3E5967
-}
-.link_override:hover,
-.link_override:focus {
-	font-size: 16px;
-	color:  #49E2f2;
-	text-decoration: none;
-	outline: none;
-}
-.li_override {
-	color: #3E5967;
-}
-.li_override:hover,
-.li_override:focus {
-	text-decoration: none;
-	outline: none;
-}
-
-// Header collapse menu icon
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #49E2f2;
-}
-.navbar-default .navbar-toggle:hover .icon-bar {
-	background-color: #FFFFFF;
-}
-.navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: #FFFFFF;
-}
-.navbar-default .navbar-toggle {
-	border-color: #49E2f2;
-}
-.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus {
-	background-color: #49E2f2;
-	transition: background-color 0.2s ease-out, 
-				border-color 0.2s ease-in;
-}
-
-/************************************/
-/****** Signin | Signout links ******/
-/************************************/
-// strong > a {
-// 	color: #3E5967;
-// }
-// strong > a:hover {
-// 	color: #49e2f2;
-// 	text-decoration: none;
-// }
-
 
 /************************************/
 /*************** MODAL **************/
@@ -345,15 +251,10 @@ footer .glyphicon:hover {
 }
 .invited_link {
 	font-size: 18px;
-	color: #49E2f2;
+	color: $oj;
 	font-weight: bold;
 }
 .invited_link:hover {
-	color: #3E5967;
-	text-decoration: none;	
+	color: $oj;	
 }
-.about-card {
-  width: 100px;
-  height: 200px;
-  background-color: #FFF;
-}
+
