@@ -75,7 +75,7 @@
 	border: 1px solid #3B5998;
 	width: 140px;
 	height: 47px;
-	margin: 5px 0px;
+	margin: 5px auto;
 	outline: none;
 	&:hover, &:focus {
 		background: #FFF;
@@ -84,7 +84,9 @@
 				border-color 0.3s ease-in;		
 	}
 }
-
+.btn-box {
+	width: 140px;
+}
 // vertical alignment fix for Cancel button in Deed Edit screen
 #vert-fix{
 	margin-top: 0px;
