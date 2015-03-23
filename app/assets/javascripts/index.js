@@ -1,21 +1,12 @@
-$(function(){
-  var stickerTop = parseInt($('#howtoNav').offset().top);
-  $(window).scroll(function() {
-    var movelisting = (parseInt($(window).scrollTop()) + parseInt($("#howtoNav").css('margin-top')) > stickerTop) ? '200px' : '0px';
-    $("#search-listings-container").css("marginTop", movelisting);
-
-    $("#howtoNav").css((parseInt($(window).scrollTop()) + parseInt($("#howtoNav").css('margin-top')) > stickerTop) ? {
-      position: 'fixed',
-      top: '0px',
-      left: '0px',
-    } : {
-      position: 'relative',
-    }); 
-  });
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
 });
-
-
-
 
 
 

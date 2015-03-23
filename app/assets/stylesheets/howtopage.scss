@@ -1,39 +1,63 @@
+.howtoBox {
+  width:100%;
+}
 .howto {
-    display: table;
-    width: 75%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #ffffff;
-    background-color: #fff;
-    box-shadow: 0 3px 9px rgba(0,0,0,.5);
-    margin: 20px auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    
+  display: table;
+  width:60%;
+  height: 400px;
+  padding: 20px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #fff;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  margin: 30px auto;
+  position:relative
 }
-.howto-body {
-  font-family: $mainFont;
-  font-size: 40px;
-  color: blue;
+.howtoTitle {
+  position:absolute;
+  bottom: 5px;
+}
+
+.dockBottom-last {
+  bottom:0;
+  display: table;
+  width: 100%;
   text-align: center;
-  line-height: 1;
-  // position:relative;
 }
-  .dockBottom-last {
-    position:absolute;
-    width: 100%;
-    bottom:0;
-  }
 
-  .howtoBox {
-    position:relative
+.arrow-color {
+  color: #fff;
+  &:hover {
+    color: $ltblue;
   }
+}
+.dockBottom-last p {
+  color: #fff;
+}
 
-//   .howto-card {
-//   width: 100px;
-//   height: 200px;
-//   background-color: #FFF;
-// }
+.howto1 {
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto1.jpg') no-repeat bottom;
+  max-height: 400px;
+  background-size:cover
+}
+.howto2 {
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto2.jpg') no-repeat top;
+  max-height: 400px;
+  background-size:cover
+}
+.howto3 {
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
+  max-height: 400px;
+  background-size:cover
+}
+.howto4 {
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
+  max-height: 400px;
+  background-size:cover
+}
+.howto5 {
+  background:radial-gradient(circle, rgba(0,0,0,.1), rgba(0,0,0,.1)), url('howto3.jpg') no-repeat top;
+  max-height: 400px;
+  background-size:cover
+}
