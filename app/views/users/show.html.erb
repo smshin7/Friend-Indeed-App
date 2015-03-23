@@ -14,6 +14,7 @@
 	<!-- User Profile Title Bar -->
 	<h1><%= @user.name %>'s profile</h1>
 
+
 	<!-- User account type: Original User or Invited by -->
 	<% if !!@referrer %>
 	<h4>Invited by <%= link_to @referrer.name, user_path(@referrer), class: "invited_link" %></h4>
@@ -26,10 +27,11 @@
 		</div>
 		<% if @user == current_user %>
 		<!-- Facebook Share button -->
-		<a id="share_button" target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" class="btn btn-fbshare">></a>
-		<br>
+
+		<a id="share_button" target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" class="btn btn-custom-fb"><i class="fa fa-facebook-official fa-2x"></i> &nbsp;Share</a>
+		<!-- <br> -->
 		<!-- <div class="fb-share-button" data-href="https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" data-layout="button"></div> -->
-		<br>
+		<!-- <br> -->
 
 		<!-- Create deed button -->
 		<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>

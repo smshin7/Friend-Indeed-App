@@ -66,18 +66,25 @@
 .btn.focus,.btn:active.focus,.btn.active.focus {
 	outline: none;
 }
-.btn-fbshare {
-	width: 142px;
-	height: 48px;
-	margin-top: 10px;
-	margin-bottom: 5px;
+.btn-custom-fb {
+	background: #3B5998;
+	border-radius: 0px;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #3B5998;
+	width: 140px;
+	height: 47px;
+	margin: 5px 0px;
+	outline: none;
+	&:hover, &:focus {
+		background: #FFF;
+		color: #3B5998;
+		transition: background-color 0.3s ease-out, 
+				border-color 0.3s ease-in;		
+	}
 }
-.btn-fbshare:hover {
-	transition: background-color 0.2s ease-out, 
-				border-color 0.2s ease-in;	
-	border: 1px  solid white;
-	color: black;
-}
+
 // vertical alignment fix for Cancel button in Deed Edit screen
 #vert-fix{
 	margin-top: 0px;
