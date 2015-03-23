@@ -1,3 +1,9 @@
+$mainFont: 'Raleway', sans-serif;
+$bluegrey: #3E5967;
+$oj: #F15545;
+$fbBlue:#3B5998;
+$green: #06CC97;
+
 html {
 	height: 100%;
 	width: 100%;
@@ -45,12 +51,29 @@ body {
 	padding: 15px;
 	box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
-
+.profilepic_box {
+	width:202px;
+}
 .profilepic_box img{
 	border: 1px solid #3E5967;
+	margin-bottom: 5px;
 }
 .profile-btn-box {
 	padding: 0px;
+}
+.peopleInvitedTitle {
+	font-family: $mainFont;
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.peopleInvited {
+	font-size: 18px;
+	color: $oj;
+	&:hover {
+		color: $oj;
+
+	}
 }
 /************************************/
 /*********** Landing Page ***********/
@@ -175,6 +198,12 @@ footer .glyphicon:hover {
 .navbar-text {
 	color: #ffffff;
 }
+
+//removes underline when collapsed
+.navbar-header a:hover {
+	text-decoration: none;
+}
+
 .navbar-text {
 	font-family: 'Sacramento', cursive;
 	font-size: 65px;
@@ -217,7 +246,7 @@ footer .glyphicon:hover {
 	color: #3E5967
 }
 .navbar-default .navbar-nav > li > a:hover {
-	color: #49E2f2
+	color: #49E2f2;
 }
 .link-margin-override {
 	font-size: 16px;
@@ -245,20 +274,21 @@ footer .glyphicon:hover {
 
 // Header collapse menu icon
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #49E2f2;
+	background-color: #fff;
 }
 .navbar-default .navbar-toggle:hover .icon-bar {
-	background-color: #FFFFFF;
+	background-color: $oj;
 }
 .navbar-default .navbar-toggle:focus .icon-bar {
 	background-color: #FFFFFF;
 }
 .navbar-default .navbar-toggle {
-	border-color: #49E2f2;
+	border-color: #fff;
 }
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
-	background-color: #49E2f2;
+	border-color: #fff;
+	background-color: #fff;
 	transition: background-color 0.2s ease-out, 
 				border-color 0.2s ease-in;
 }
@@ -345,12 +375,11 @@ footer .glyphicon:hover {
 }
 .invited_link {
 	font-size: 18px;
-	color: #49E2f2;
+	color: $oj;
 	font-weight: bold;
 }
 .invited_link:hover {
-	color: #3E5967;
-	text-decoration: none;	
+	color: $oj;	
 }
 .about-card {
   width: 100px;
