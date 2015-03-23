@@ -1,0 +1,91 @@
+/************************************/
+/************** BUTTONS *************/
+/************************************/
+.btn-signin {
+	background-color: #3B5998;
+	border-radius: 0px;
+	color: #ffffff;
+	font-size: 30px;
+	padding: 20px 25px;
+}
+.btn-signin:hover,
+.btn-signin:focus{
+	background-color: white;
+	color: #3B5998;
+	outline: none;
+	transition: background-color 0.3s ease-out, 
+				border-color 0.3s ease-in;
+	cursor: pointer;
+	text-decoration: none
+}
+.btn-custom {
+	background: transparent;
+	border-radius: 0px;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #ffffff;
+	width: 140px;
+	height: auto;
+	margin: 5px 0px;
+	outline: none;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+	background: #ffffff;
+	color: #F15545;
+	transition: background-color 0.3s ease-out, 
+				border-color 0.3s ease-in;
+	text-decoration: none;
+}
+.btn-custom-alt {
+	background: #F15545;
+	border-radius: 0px;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #F15545;
+	width: 140px;
+	height: auto;
+	margin: 5px 0px;
+	outline: none;
+}
+.btn-custom-alt:hover,
+.btn-custom-alt:focus {
+	background: #FFFFFF;
+	color: #F15545;
+	transition: background-color 0.3s ease-out, 
+				border-color 0.3s ease-in;
+}
+// Fixes width on Profile button 
+.btn-profile{
+	width: auto;
+}
+// Removes button outline 
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+	outline: none;
+}
+.btn-custom-fb {
+	background: #3B5998;
+	border-radius: 0px;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding: 10px 15px;
+	border: 1px solid #3B5998;
+	width: 140px;
+	height: 47px;
+	margin: 5px 0px;
+	outline: none;
+	&:hover, &:focus {
+		background: #FFF;
+		color: #3B5998;
+		transition: background-color 0.3s ease-out, 
+				border-color 0.3s ease-in;		
+	}
+}
+
+// vertical alignment fix for Cancel button in Deed Edit screen
+#vert-fix{
+	margin-top: 0px;
+}
