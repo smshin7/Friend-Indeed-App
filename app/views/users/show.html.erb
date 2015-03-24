@@ -1,4 +1,29 @@
-<div class="container-fluid">
+<script>
+
+// Javascript Code for Facebook Share button
+FB = null;
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  // if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1410296982600187&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+ $(document).ready(function(){
+    	$('#share_button').click(function(e){
+    		e.preventDefault();
+    		FB.ui(
+    		{
+    			method: 'share',
+    			href: 'https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>',
+    		}, function(response){});
+    	});
+    });
+  
+</script> 
+
+  <div class="container-fluid">
 	<%= render "partials/nav" %>
 	<%= render "partials/deedmodal" %>
 
@@ -21,10 +46,10 @@
 					<% if @user == current_user %>
 
 					<!-- Facebook Share button -->
-					<a id="share_button" target="_blank" href="https://facebook.com/sharer.php?u=https://friendindeed.herokuapp.com/?ref_id=<%= @user.token %>" class="btn btn-custom-fb"><i class="fa fa-facebook-official fa-1x"></i> &nbsp;Share</a>
+					<a id="share_button" target="_blank" class="btn btn-custom-fb"><i class="fa fa-facebook-official fa-1x"></i> &nbsp;Share</a>
 
 					<!-- Create deed button -->
-					<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+					<button type="button" class="btn btn-custom-alt" data-toggle="modal" data-target="#deed-modal">Create Deed</button>
 					<% end %>
 
 					<!-- Show deed button -->
@@ -35,7 +60,7 @@
 			<br><!-- Provides cushion at mdaller res -->
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-6">
 			<div class="peopleInvitedTitle">People Invited</div>
 			<% @invited.each do |i| %>
 			<div class="peopleInvited"><%= link_to i.name, user_path(i), class: "peopleInvited" %></div>
