@@ -35,7 +35,7 @@
 			<br><!-- Provides cushion at smaller res -->
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-6">
 			<div class="peopleInvitedTitle">People Invited</div>
 			<% @invited.each do |i| %>
 			<div class="peopleInvited"><%= link_to i.name, user_path(i), class: "peopleInvited" %></div>

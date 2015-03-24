@@ -16,14 +16,20 @@
   text-align: center;
 }
 .howtoTitle {
-
   position: relative;
   margin-top:85px;
 }
 .howto1 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto1.jpg') no-repeat bottom;
+  background: radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto1.jpg') no-repeat bottom;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  transition: background 2s;
+}
+.howto1:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto1.jpg') no-repeat bottom;
+  max-height: 500px;
+  background-size: ;w
+  cover;
 }
 .howto2 {
   background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto2.jpg') no-repeat top;
