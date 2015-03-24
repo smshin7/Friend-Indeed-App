@@ -1,6 +1,15 @@
 .howtoBox {
   width:100%;
 }
+#about-page-title {
+  font-size: 50px;
+  color: #fff;
+}
+#logo-about {
+	font-family: 'Sacramento', cursive;
+	font-size: 85px;
+	color: #ffffff;
+}
 .howto {
   display: table;
   width:60%;
@@ -23,11 +32,11 @@
   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto1.jpg') no-repeat bottom;
   max-height: 500px;
   background-size: cover;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-in-out ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .howto1:hover {
   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto1.jpg') no-repeat bottom;
@@ -41,11 +50,11 @@
   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto2.jpg') no-repeat top;
   max-height: 500px;
   background-size: cover;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -ms-transition: background 1s;
-  -o-transition: background 1s;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .howto2:hover {
   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto2.jpg') no-repeat top;
@@ -59,11 +68,11 @@
   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto3.jpg') no-repeat top;
   max-height: 500px;
   background-size: cover;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -ms-transition: background 1s;
-  -o-transition: background 1s;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .howto3:hover {
   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto3.jpg') no-repeat top;
@@ -77,11 +86,11 @@
   background:radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto4.jpg') no-repeat top;
   max-height: 500px;
   background-size: cover;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -ms-transition: background 1s;
-  -o-transition: background 1s;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .howto4:hover {
   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto4.jpg') no-repeat top;
@@ -95,11 +104,11 @@
   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto5.jpg') no-repeat top;
   max-height: 500px;
   background-size: cover;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -ms-transition: background 1s;
-  -o-transition: background 1s;
-  transition: background 1s ease-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .howto5:hover {
   background: radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;

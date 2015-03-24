@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -6,7 +6,7 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-});
+  });
 
 // d3.tip
 // Copyright (c) 2013 Justin Palmer
