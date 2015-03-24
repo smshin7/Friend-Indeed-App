@@ -13,12 +13,14 @@ class DeedsController < ApplicationController
   def create
     current_user = User.find(params[:user_id]) unless current_user
     current_user.deeds.new(params.require(:deed).permit!)
+    current_user.save
+    redirect_to user_deeds_path(current_user)
 
-    if current_user.save
-      redirect_to user_deeds_path(current_user)
-    else
-      render :new
-    end
+    # if current_user.save
+    #   redirect_to user_deeds_path(current_user)
+    # else
+    #   redirect_to user_deeds_path(current_user)
+    # end
   end
 
   def edit
