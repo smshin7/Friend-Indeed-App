@@ -1,7 +1,8 @@
 <div class="container-fluid">
 <%= render "partials/nav" %>
 <%= render "partials/deedmodal" %>
-<%#= render "partials/editdeedmodal" %>
+<%= render "partials/deedmodal2" %>
+
 
 <div class="deed-container">
 	<div class="row">
@@ -14,7 +15,7 @@
 		<!-- "Create deed" and "Back to profile" buttons -->
 		<div class="col-xs-6 text-right">
 			<% if @user == current_user %>
-				<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#create-deed-modal">Create Deed</button>
+				<button type="button" class="btn btn-custom" data-toggle="modal" data-target="#deed-modal">Create Deed</button>
 			<% end %>
 			<%= link_to "Back to profile", user_path(@user), class: "btn btn-custom btn-profile"%>
 		</div>
@@ -30,10 +31,10 @@
 				</div>	
 
 				<div class="deed-option">
-					<%= link_to "edit", edit_user_deed_path(d.user,d), class: "deed-link" %>
+					<%#= link_to "edit", edit_user_deed_path(d.user,d), class: "deed-link" %>
 
 
-					<!-- <a class="deed-link" data-toggle="modal" data-target="#edit-deed-modal">edit</a> -->
+					<a class="deed-link" data-toggle="modal" data-target="#deed-modal2" data-remote="<%= edit_user_deed_path(d.user, d) %> #modal-edit-fields">edit</a>
 
 					<!-- <a class="deed-link" data-toggle="modal" data-target="#edit-deed-modal">edit</a> -->
 					
