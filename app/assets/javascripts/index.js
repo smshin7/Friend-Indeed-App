@@ -8,8 +8,6 @@ $(function() {
     });
 });
 
-
-
 // d3.tip
 // Copyright (c) 2013 Justin Palmer
 //
