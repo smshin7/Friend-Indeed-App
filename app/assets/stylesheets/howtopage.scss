@@ -16,34 +16,98 @@
   text-align: center;
 }
 .howtoTitle {
-
   position: relative;
   margin-top:85px;
 }
 .howto1 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto1.jpg') no-repeat bottom;
+  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto1.jpg') no-repeat bottom;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: background 1s ease-out;
+}
+.howto1:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto1.jpg') no-repeat bottom;
+  max-height: 500px;
+  background-size: cover;
+  .howtoTitle {
+    display: none;
+  }
 }
 .howto2 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto2.jpg') no-repeat top;
+  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto2.jpg') no-repeat top;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s ease-out;
+}
+.howto2:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto2.jpg') no-repeat top;
+  max-height: 500px;
+  background-size: cover;
+  .howtoTitle {
+    display: none;
+  }
 }
 .howto3 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto3.jpg') no-repeat top;
+  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto3.jpg') no-repeat top;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s ease-out;
+}
+.howto3:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto3.jpg') no-repeat top;
+  max-height: 500px;
+  background-size :cover;
+  .howtoTitle {
+    display: none;
+  } 
 }
 .howto4 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto4.jpg') no-repeat top;
+  background:radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto4.jpg') no-repeat top;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s ease-out;
+}
+.howto4:hover {
+  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto4.jpg') no-repeat top;
+  max-height: 500px;
+  background-size: cover;
+  .howtoTitle {
+    display: none;
+  }
 }
 .howto5 {
-  background:radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;
+  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto5.jpg') no-repeat top;
   max-height: 500px;
-  background-size:cover
+  background-size: cover;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s ease-out;
+}
+.howto5:hover {
+  background: radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;
+  max-height: 500px;
+  background-size: cover;
+  .howtoTitle {
+    display: none;
+  }
 }
 .dockBottom-last {
   bottom:0;
