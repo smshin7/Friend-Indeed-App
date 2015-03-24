@@ -19,7 +19,7 @@ class DeedsController < ApplicationController
     # if current_user.save
     #   redirect_to user_deeds_path(current_user)
     # else
-    #   redirect_to user_deeds_path(current_user)
+    #   render :new
     # end
   end
 
