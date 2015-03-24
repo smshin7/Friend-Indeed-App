@@ -1,26 +1,22 @@
-<!-- Edit Deed Static Modal -->
-<div class="modal show ">
+<div class="modal fade" id="deedmodal2" tabindex="-1" role="dialog" aria-labelledby="myEditModalLabel" aria-hidden="false">
 	<div class="modal-dialog">
-		<div class="modal-content edit-deed-margin">
+		<div class="modal-content" id="modal-edit-fields">
+			
 			<div class="modal-header">
-			<h4 class="modal-title" id="myEditModalLabel">Edit Deed</h4>
+				<div class="modal-title" id="myEditModalLabel">Edit Deed</div>
 			</div>
-
 			<div class="modal-body">
 				<%= form_for [@deed.user, @deed] do |f| %>
-				<div class="form-group">
-					<%= f.text_field :to_id, placeholder: "I did a deed for...", class: "form-control id-width" %>
-				</div>
-				<div class="form-group">
-					<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
-					<br>
-					<%= f.submit "Save", class: "btn-custom-alt btn" %> <span><%= link_to "Cancel", user_deeds_path(current_user), class: "btn btn-custom-alt" %></span>
-				</div>
-				<% end %>	
-			</div> <!-- Closes Edit Form -->
-
+					<div class="form-group">
+						<%= f.text_field :to_id, placeholder: "I did a deed for...", class: "form-control id-width" %>
+					</div>
+					<div class="form-group">
+						<%= f.text_area :body, placeholder: "What I did was...", class: "form-control body-width", rows: 6 %>
+						<br>
+						<%= f.submit "Update", class: "btn-custom-alt btn" %> <span><%= link_to "Cancel", user_deeds_path(current_user), class: "btn btn-custom-alt" %></span>
+					</div>
+				<% end %>
+ 			</div> <!-- Closes Edit Form -->
 		</div>
 	</div>
 </div>
-
- <!-- <button type="button" class="btn-custom-alt" data-dismiss="modal">Cancel</button>  -->
