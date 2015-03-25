@@ -1,122 +1,123 @@
-.howtoBox {
-  width:100%;
-}
+// .howtoBox {
+//   width:100%;
+// }
+// .howto {
+//   display: table;
+//   width:60%;
+//   height: 500px;
+//   padding: 20px;
+//   color: #fff;
+//   font-size: 55px;
+//   font-weight: bold;
+//   background-color: #fff;
+//   box-shadow: 0 3px 9px rgba(0,0,0,.5);
+//   margin: 30px auto;
+//   // position:absolute;
+//   text-align: center;
+// }
+// .howtoTitle {
+//   position: relative;
+//   margin-top:85px;
+// }
+// .howto1 {
+//   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto1.jpg') no-repeat bottom;
+//   max-height: 500px;
+//   background-size: cover;
+//   -webkit-transition: background 1s ease-in-out ease-in-out;
+//   -moz-transition: background 1s ease-in-out;
+//   -ms-transition: background 1s ease-in-out;
+//   -o-transition: background 1s ease-in-out;
+//   transition: background 1s ease-in-out;
+// }
+// .howto1:hover {
+//   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto1.jpg') no-repeat bottom;
+//   max-height: 500px;
+//   background-size: cover;
+//   .howtoTitle {
+//     display: none;
+//   }
+// }
+// .howto2 {
+//   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto2.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   -webkit-transition: background 1s ease-in-out;
+//   -moz-transition: background 1s ease-in-out;
+//   -ms-transition: background 1s ease-in-out;
+//   -o-transition: background 1s ease-in-out;
+//   transition: background 1s ease-in-out;
+// }
+// .howto2:hover {
+//   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto2.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   .howtoTitle {
+//     display: none;
+//   }
+// }
+// .howto3 {
+//   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto3.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   -webkit-transition: background 1s ease-in-out;
+//   -moz-transition: background 1s ease-in-out;
+//   -ms-transition: background 1s ease-in-out;
+//   -o-transition: background 1s ease-in-out;
+//   transition: background 1s ease-in-out;
+// }
+// .howto3:hover {
+//   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto3.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size :cover;
+//   .howtoTitle {
+//     display: none;
+//   } 
+// }
+// .howto4 {
+//   background:radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto4.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   -webkit-transition: background 1s ease-in-out;
+//   -moz-transition: background 1s ease-in-out;
+//   -ms-transition: background 1s ease-in-out;
+//   -o-transition: background 1s ease-in-out;
+//   transition: background 1s ease-in-out;
+// }
+// .howto4:hover {
+//   background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto4.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   .howtoTitle {
+//     display: none;
+//   }
+// }
+// .howto5 {
+//   background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto5.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   -webkit-transition: background 1s ease-in-out;
+//   -moz-transition: background 1s ease-in-out;
+//   -ms-transition: background 1s ease-in-out;
+//   -o-transition: background 1s ease-in-out;
+//   transition: background 1s ease-in-out;
+// }
+// .howto5:hover {
+//   background: radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;
+//   max-height: 500px;
+//   background-size: cover;
+//   .howtoTitle {
+//     display: none;
+//   }
+// }
+
 #about-page-title {
   font-size: 50px;
   color: #fff;
 }
 #logo-about {
-	font-family: 'Sacramento', cursive;
-	font-size: 85px;
-	color: #ffffff;
-}
-.howto {
-  display: table;
-  width:60%;
-  height: 500px;
-  padding: 20px;
-  color: #fff;
-  font-size: 55px;
-  font-weight: bold;
-  background-color: #fff;
-  box-shadow: 0 3px 9px rgba(0,0,0,.5);
-  margin: 30px auto;
-  // position:absolute;
-  text-align: center;
-}
-.howtoTitle {
-  position: relative;
-  margin-top:85px;
-}
-.howto1 {
-  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto1.jpg') no-repeat bottom;
-  max-height: 500px;
-  background-size: cover;
-  -webkit-transition: background 1s ease-in-out ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out;
-}
-.howto1:hover {
-  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto1.jpg') no-repeat bottom;
-  max-height: 500px;
-  background-size: cover;
-  .howtoTitle {
-    display: none;
-  }
-}
-.howto2 {
-  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto2.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  -webkit-transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out;
-}
-.howto2:hover {
-  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto2.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  .howtoTitle {
-    display: none;
-  }
-}
-.howto3 {
-  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto3.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  -webkit-transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out;
-}
-.howto3:hover {
-  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto3.jpg') no-repeat top;
-  max-height: 500px;
-  background-size :cover;
-  .howtoTitle {
-    display: none;
-  } 
-}
-.howto4 {
-  background:radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto4.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  -webkit-transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out;
-}
-.howto4:hover {
-  background: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,0)), url('howto4.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  .howtoTitle {
-    display: none;
-  }
-}
-.howto5 {
-  background: radial-gradient(circle, rgba(0,0,0,.8), rgba(0,0,0,.8)), url('howto5.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  -webkit-transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out;
-}
-.howto5:hover {
-  background: radial-gradient(circle, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('howto5.jpg') no-repeat top;
-  max-height: 500px;
-  background-size: cover;
-  .howtoTitle {
-    display: none;
-  }
+  font-family: 'Sacramento', cursive;
+  font-size: 85px;
+  color: #ffffff;
 }
 .dockBottom-last {
   bottom:0;
@@ -124,7 +125,6 @@
   width: 100%;
   text-align: center;
 }
-
 .arrow-color {
   color: #fff;
   &:hover {
@@ -133,4 +133,17 @@
 }
 .dockBottom-last p {
   color: #fff;
+}
+.aboutBox {
+  width: 100%;
+}
+.aboutTitle {
+   color: #fff;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.aboutImage {
+  margin-bottom: 20px;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
