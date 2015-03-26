@@ -11,7 +11,7 @@
 			<%= f.text_field :to_id, placeholder: "Deed for...", class: "form-control id-width" %>
 		</div>
 		<div class="form-group">
-			<%= f.text_area_tag :body, placeholder: "Enter deed", class: "form-control body-width", rows: 6, maxlength:5 %>
+			<%= f.text_area :body, placeholder: "Enter deed", class: "form-control body-width", rows: 6 %>
 		</div>
 		<%= f.submit "Submit", class: "btn-custom" %>
 		<% end %>
