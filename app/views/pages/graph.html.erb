@@ -4,8 +4,8 @@
 <h1 class="text-center"><strong>Connections on</strong> <p id="logo-about"><span class="bluegrey">friend</span><span class="white">indeed</span></p></h1>
 
 <script>
-    // d3.json("http://friendindeed.herokuapp.com/api/users", function(root){
-      d3.json("http://localhost:3000/api/users", function(root){
+    d3.json("http://friendindeed.herokuapp.com/api/users", function(root){
+      // d3.json("http://localhost:3000/api/users", function(root){
     
     var links =[];
 
@@ -55,7 +55,7 @@
     var svg = d3.select("body").append("svg")
         .attr("width", width + "px")
         .attr("height", height + "px")
-        .style("background-color", "#202020")
+        .style("background-color", "#fff")
         .style("box-shadow", "0 3px 9px rgba(0,0,0,.5)")
         .style("margin", "20px auto 20px auto")
         .style("display", "block");
